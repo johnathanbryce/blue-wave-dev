@@ -57,7 +57,7 @@
     z-index: 10;
     background-color: var(--defaultColor);
     width: 90rem;
-    padding: 5% 5%;
+    /* padding: 5% 5%; */
     position: relative; /* necessary for close btn */
     border-radius: var(--borderRadius);
 }
@@ -71,18 +71,31 @@
     flex-direction: column;
     gap: var(--contentGap);
     flex: 1;
+    padding: 5% 5%;
 }
 
 .text_wrapper p {
     font-size: clamp(1.5rem, 2vw, 1.8rem);
 }
 
+.right_side_bg_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 5%;
+    gap: var(--contentGap);
+    background-color: var(--backgroundColor);
+}
+
 .why_hand_code_img{
-    width: 40%;
-    position: relative;
-    bottom: 8rem;
-    object-fit: contain;
+    width: 100%;
     pointer-events: none;
+}
+
+.right_side_list_container li {
+    padding: 0.5rem 0;
+    font-size: clamp(1.4rem, 2vw, 1.65rem);
 }
 
 /* Tablets (landscape) / Small Laptops) */

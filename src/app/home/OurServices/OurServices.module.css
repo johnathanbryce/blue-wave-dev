@@ -12,11 +12,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--contentGap);
     background-color: var(--primaryColor);
     padding: 2rem;
     border-radius: var(--borderRadius);
-    width: 75%;
+    width: 85%;
     flex: 2;
     text-align: center;
     margin-bottom: var(--contentGap);
@@ -86,16 +85,15 @@
     .services_card, .services_card_top{
         text-align: left;
     }
-
-    .services_card, .services_card_top{
-        width: 75%;
-    }
 }
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) {  
     .services{
         margin-top: 27.5rem;
+    }
+    .services_card_top{
+        width: 100%;
     }
 }
 

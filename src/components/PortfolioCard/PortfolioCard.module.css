@@ -11,7 +11,12 @@
     border-bottom: 0.5rem solid var(--secondaryColor);
 }
 
-.location{
+.portfolio_img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.location {
     color: #999;
 }
 
@@ -22,7 +27,8 @@
     margin-top: auto;
     align-self: flex-start;
     text-align: center;
-    border-radius: var(--borderRadius);    font-weight: bold;
+    border-radius: var(--borderRadius);    
+    font-weight: bold;
     color: var(--textColor);
 }
 

@@ -5,6 +5,8 @@ import styles from './ContactModal.module.css'
 import Button from '../Button/Button';
 // External Libraries
 import { AiOutlineClose } from 'react-icons/ai';
+// external libraries
+import { motion } from "framer-motion"
 
 interface ContactModalProps {
     onClickCloseModal: () => void,  
@@ -41,7 +43,12 @@ const handleFormSubmit = () => {
   return (
     <aside className={styles.contact_modal_container}>
         <div className={styles.modal_background} onClick={onClickCloseModal} />
-        <div className={styles.contact_form_container}>
+        <motion.div 
+          className={styles.contact_form_container}
+          initial={{y: "50", opacity: 0, scale: 0.5}}
+          whileInView={{y: 0, opacity: 1, scale: 1}}
+          transition={{duration: 0.25, ease: 'easeOut'}}
+        >
             <div className={styles.close_btn_container}>
                     <AiOutlineClose onClick={onClickCloseModal} className={styles.close_btn} />
             </div>
@@ -63,9 +70,7 @@ const handleFormSubmit = () => {
                 <textarea id="message" name="message" placeholder="Your Message" className={styles.textarea} required></textarea>
                 <Button label={'Submit'} bgColorBlue={true} />
             </form>
-        </div>
-                
- 
+        </motion.div>
     </aside>
   )
 }

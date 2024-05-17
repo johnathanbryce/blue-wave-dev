@@ -1,20 +1,12 @@
 'use client'
 import { useState } from 'react'
 import styles from './NewProject.module.css'
-import Image from 'next/image'
 // internal components
 import ContactModal from '@/components/ContactModal/ContactModal'
 import Button from '@/components/Button/Button'
 // internal assets
-import newProject from '../../../../public/images/newProject.jpg'
-// Image by pch.vector on Freepik
 import Lottie from 'lottie-react';
 import animationData from '../../../assets/jbwd-1.json'
-
-/* interface Interactivity {
-  mode: 'scroll' 
-  actions: any[]
-} */
 
 function NewProject() {
   const [isContactModalActive, setIsContactModalActive] = useState(false);
@@ -26,27 +18,6 @@ function NewProject() {
   const onClickCloseModal = () => {
     setIsContactModalActive(false);                                               
   }
-
-/*   const interactivity: Interactivity = {
-    mode: "scroll",
-    actions: [
-      {
-        visibility: [0, 0.2],
-        type: "stop",
-        frames: [0],
-      },
-      {
-        visibility: [0.2, 0.45],
-        type: "seek",
-        frames: [0, 45],
-      },
-      {
-        visibility: [0.45, 1.0],
-        type: "loop",
-        frames: [45, 60],
-      },
-    ],
-  }; */
 
   return (
     <section className={styles.new_project}>
