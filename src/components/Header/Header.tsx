@@ -60,7 +60,6 @@ function Header() {
         {isContactModalActive && <ContactModal onClickCloseModal={onClickCloseModal}/>}
         {/*  dropdown icon displays >950 px screen size*/}
         <HamburgerDropdown isDropdownActive={isDropdownActive} toggleDropdown={toggleDropdown}/>
-        {/* <h1>jB</h1> */}
         <Image 
           src={WavesLogoTransparent} 
           alt="Blue Wave Dev's logo. A circle with two small waves"
@@ -85,6 +84,7 @@ function Header() {
                     {/* <li><Link to="home" spy={true} smooth={true} duration={500} offset={-850} onClick={onNavItemClickCloseDropdown}> Home </Link></li>  */}
                     <li><Link to="services" spy={true} smooth={true} duration={500} offset={-25}  onClick={onNavItemClickCloseDropdown}> Services </Link></li>  
                     <li><Link to="portfolio" spy={true} smooth={true} duration={250} offset={-25} onClick={onNavItemClickCloseDropdown}> Portfolio </Link></li>     
+                    <li><Link to="testimonials" spy={true} smooth={true} duration={500} offset={-25} onClick={onNavItemClickCloseDropdown}> Testimonials </Link></li>
                     <li><Link to="about" spy={true} smooth={true} duration={500} offset={-25} onClick={onNavItemClickCloseDropdown}> About </Link></li>
                     {/* <li><Link to='' onClick={onClickOpenModal}> Contact </Link></li> */}
             </NavBarDropdown>

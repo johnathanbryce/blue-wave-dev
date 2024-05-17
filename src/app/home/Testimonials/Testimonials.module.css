@@ -9,73 +9,85 @@
     }
 }
 
-.new_project{
+.testimonials {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     gap: var(--contentGap);
     background-color: var(--primaryColor);
     padding: 3% 10%;
+    margin-bottom: 5rem;
+    margin-top: 10rem;
     border-radius: var(--borderRadius);
     --webkit-box-shadow: 0 -20px 15px rgba(61, 148, 255, 1), 0 25px 15px rgba(61, 148, 255, 1);
     box-shadow: 0 -20px 15px rgba(61, 148, 255, 1), 0 25px 15px rgba(61, 148, 255, 1);
     animation: pulsate 1.25s infinite ease-in-out;
 }
 
-.new_project_title {
-    color: var(--textColor)
+.testimonials_header {
+    color: var(--textColor);
+    text-align: left;
 }
 
-.new_project_content_left{
+.testimonials_content_left{
     display: flex;
     flex-direction: column;
     gap: var(--contentGap);
     flex: 1;
 }
 
-.animation {
-    flex: 0.2;
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 0 0 100%; /* necessary for carousel */
+    min-width: 0; /* necessary for carousel */
 }
 
-.white_font_bold{
+
+
+.testimonial_quote, .testimonial_author{
     color: var(--textColor);
-    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    margin: 0;
 }
 
-.contact_container{
+.testimonial_author {
     display: flex;
     align-items: center;
     gap: var(--contentGap);
+    color: var(--textColor);
+}
+
+.author_name_containerr{
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial_author p {
+    color: var(--textColor) 
+}
+
+.testimonial_author a {
+    padding-top: 0.25rem;
+    color: var(--textColor);
+    transition: var(--hoverTransition)
+}
+
+.testimonial_author a:hover {
+    font-weight: 600;
+    color: var(--highlightColor)
 }
 
 /* Tablets (portrait) */
 @media (max-width: 950px) {  
-    .new_project{
+    .testimonials{
         flex-direction: column;
-    }
-
-    .new_project_content_left{
-        align-items: center;
-        text-align: center;
-    }
-    
-    .contact_container{
-        flex-direction: column;
-    }
-
-    .animation {
-        margin: 0 auto;
-        width: 20rem;
     }
 }
-
-
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px){
-    .new_project{
-        padding: 8% 1rem;
+    .testimonials{
+        padding-top: 8% /* 1rem; */
     }
 }
-
-
