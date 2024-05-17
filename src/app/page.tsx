@@ -7,6 +7,7 @@ import Hero from "./home/Hero/Hero"
 import OurServices from "./home/OurServices/OurServices"
 import NewProject from "./home/NewProject/NewProject"
 import Portfolio from './home/Portfolio/Portfolio'
+import Testimonials from './home/Testimonials/Testimonials'
 import About from './home/About/About'
 import Footer from '@/components/Footer/Footer'
 
@@ -22,6 +23,9 @@ export default function Home() {
       <NewProject />
       <LayoutContainer>
         <Portfolio />
+      </LayoutContainer>
+      <Testimonials />
+      <LayoutContainer>
         <About />
       </LayoutContainer>
     </main>

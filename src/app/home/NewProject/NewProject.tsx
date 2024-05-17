@@ -51,7 +51,7 @@ function NewProject() {
   return (
     <section className={styles.new_project}>
         {isContactModalActive && <ContactModal onClickCloseModal={onClickCloseModal}/>}
-        <div className={styles.main_content_left}>
+        <div className={styles.new_project_content_left}>
             <h2 className={styles.new_project_title}> Start A New Project </h2>
             <p className={styles.white_font_bold}> Now that you&apos;re familiar with our process, let&rsquo;s get you going on your new project!</p>
             <div className={styles.contact_container}>

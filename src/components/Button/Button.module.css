@@ -7,7 +7,7 @@
 
 .reusable_btn:hover{
     transition: var(--hoverTransition);
-    background-color: var(--tertiaryColor);
+    background-color: var(--highlightColor);
     outline: 0.2rem solid var(--defaultColor);
 }
 .reusable_font_dark{
@@ -20,12 +20,14 @@
 }
 
 /* blue bg styles */
-.reusable_btn_blue{
+.reusable_btn_blue {
     background-color: var(--secondaryColor);
     border-radius: var(--borderRadius);
-    --webkit-box-shadow: 0 25px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 25px 15px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
 }
+
+
 
 .reusable_font_white{
     font-weight: bold;
