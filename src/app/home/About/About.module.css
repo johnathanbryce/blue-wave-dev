@@ -10,7 +10,7 @@
 
 .text_container{
     margin-top: 5rem;
-    width: 65%;
+    width: 85%;
     text-align: center;
 }
 
@@ -23,10 +23,10 @@
 .bio_pic{
     width: 25rem;
     border-radius: var(--borderRadius);
-    --webkit-box-shadow: 0 25px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 25px 15px rgba(0, 0, 0, 0.2);
     border: 0.3rem solid white;
     margin: 2rem 0;
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
 .text_container_bottom h6 {
@@ -48,6 +48,11 @@
         margin: 0.5rem 0;
         width: 17rem;
     }
+
+    .text_container{
+        width: 100%;
+    }
+
     .text_container_bottom{
         margin-bottom: 1.8rem;
     }

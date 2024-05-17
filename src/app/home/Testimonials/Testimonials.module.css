@@ -42,6 +42,7 @@
     gap: 2rem;
     flex: 0 0 100%; /* necessary for carousel */
     min-width: 0; /* necessary for carousel */
+    cursor: pointer;
 }
 
 
@@ -56,11 +57,6 @@
     align-items: center;
     gap: var(--contentGap);
     color: var(--textColor);
-}
-
-.author_name_containerr{
-    display: flex;
-    flex-direction: column;
 }
 
 .testimonial_author p {

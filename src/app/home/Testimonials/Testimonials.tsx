@@ -4,10 +4,10 @@ import styles from './Testimonials.module.css'
 import Carousel from '@/components/Carousels/Carousel/Carousel'
 import ClientPictureCircle from '@/components/ClientPictureCircle/ClientPictureCircle'
 // internal assets
-import matthewPic from '../../../assets/matthew.jpeg'
-import julienPic from '../../../assets/julien.jpeg'
-import jasonPic from '../../../assets/jason.jpeg'
-import sydPic from '../../../assets/sydney.jpeg'
+import matthewPic from '../../../../public/images/matthew.jpeg'
+import julienPic from '../../../../public/images/julien.jpeg'
+import jasonPic from '../../../../public/images/jason.jpeg'
+import sydPic from '../../../../public/images/sydney.jpeg'
 
 function Testimonials() {
   return (
