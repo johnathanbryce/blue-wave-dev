@@ -30,9 +30,9 @@ function NewProject() {
                 <p className={styles.white_font_bold}> or (604) 220 7425</p>
             </div>
         </div>
-        <div className={styles.animation}>
-          <Lottie animationData={animationData} /* loop={false} */ /* interactivity={interactivity} *//>
-        </div>
+{/*         <div className={styles.animation}>
+          <Lottie animationData={animationData}/>
+        </div> */}
     </section>
   )
 }
