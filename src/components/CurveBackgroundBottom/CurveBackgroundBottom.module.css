@@ -9,11 +9,12 @@
     z-index: -10;
 }
 
+
 .background_curve svg {
     position: relative;
     display: block;
     width: 110%;
-    height: 55vh;
+    height: 65vh;
 }
 
 .background_curve .shape_fill {
@@ -29,7 +30,7 @@
 
 @media only screen and (max-width: 840px){
     .background_curve svg {
-        height: 40rem;
+        height: 45rem;
     }
 }
 
@@ -43,7 +44,7 @@
 /* Smaller Mobile Devices up to 400px */
 @media (max-width: 420px) {  
     .background_curve svg {
-        height: 37.5rem;
+        height: 44.5vh;
     }
 }
 

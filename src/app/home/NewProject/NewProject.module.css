@@ -76,6 +76,11 @@
     .new_project{
         padding: 8% 1rem;
     }
+
+    .animation, .contact_container p:nth-child(2) {
+        display: none;
+    }
+
 }
 
 
