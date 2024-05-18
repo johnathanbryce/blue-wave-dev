@@ -59,13 +59,17 @@ const handleFormSubmit = () => {
               <a href="tel:+6042207425"> (604) 220 7425</a>
             </div>
             <form className={styles.form} action={EMAIL_CONTACT_EXTERNAL} onSubmit={handleFormSubmit} method="post" target="_blank">
-                <div className={styles.form_group}>
+                {/* <div className={styles.form_group}>
                     <input type="text" id="name" name="name" placeholder="Name" className={styles.input} required />
                     <input type="text" id="business" name="business" placeholder="Business" className={styles.input} required />
                 </div>
                 <div className={styles.form_group}>
                     <input type="email" id="email" name="email" placeholder="Email" className={styles.input} required />
                     <input type="tel" id="phone" name="phone" placeholder="Phone Number" className={styles.input} />
+                </div> */}
+                <div className={styles.form_group}>
+                  <input type="text" id="name" name="name" placeholder="Name" className={styles.input} required />
+                  <input type="email" id="email" name="email" placeholder="Email" className={styles.input} required />
                 </div>
                 <textarea id="message" name="message" placeholder="Your Message" className={styles.textarea} required></textarea>
                 <Button label={'Submit'} bgColorBlue={true} />
