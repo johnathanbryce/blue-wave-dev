@@ -9,7 +9,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { motion } from "framer-motion"
 
 interface ContactModalProps {
-    onClickCloseModal: () => void,  
+    onClickCloseModal: (e: any) => void,  
 }
 
 const EMAIL_CONTACT_EXTERNAL = "https://formsubmit.co/johnathanbryce@gmail.com";

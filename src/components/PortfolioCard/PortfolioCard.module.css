@@ -9,6 +9,8 @@
     --webkit-box-shadow: 0 25px 15px rgba(0, 0, 0, 0.1);
     box-shadow: 0 25px 15px rgba(0, 0, 0, 0.1);
     border-bottom: 0.5rem solid var(--secondaryColor);
+
+    width: var(--cardWidth);
 }
 
 .portfolio_img {
@@ -17,7 +19,7 @@
 }
 
 .location {
-    color: #999;
+    color: var(--textColorGrey);
 }
 
 .portfolio_btn{
@@ -44,13 +46,22 @@
 
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) { 
-    .portfolio_card{
+    .portfolio_card {
         gap: 1.8rem;
         padding: 1.5rem;
+        width: inherit;
+        width: var(--cardWidthMobile);
     } 
     .portfolio_btn{
         width: 100%;
         font-size: 1.2rem;
         padding: 1rem;
+    }
+}
+
+/* Mobile Devices up to 380px */
+@media (max-width: 380px) {  
+    .portfolio_card {
+        width: var(--cardWidthMobileTiny);
     }
 }

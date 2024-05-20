@@ -3,7 +3,7 @@ import styles from './Button.module.css'
 interface ButtonProps {
     label: string,
     bgColorBlue?: boolean,
-    onClick?: () => void,
+    onClick?: (e: any) => void,
 }
 function Button({label, bgColorBlue, onClick}: ButtonProps) {
   return (
