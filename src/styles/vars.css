@@ -9,9 +9,11 @@
     
     --backgroundColor: #0062E6;
     --backgroundColorFlip: #FFFFFF;
+    
 
     --textColor: #FFFFFF;
     --textColorFlip: #1B1B1E;
+    --textColorGrey: #888888;
 
     /* border styles */
     --borderRadius: 0.5rem;
@@ -20,5 +22,10 @@
 
     /* content gap*/
     --contentGap: 2.2rem;
+
+    /* cards */
+    --cardWidth: 45rem;
+    --cardWidthMobile: 35rem;
+    --cardWidthMobileTiny: 30rem;
     
 }

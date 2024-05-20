@@ -8,7 +8,7 @@ import whyHandCode from '../../../public/images/whyHandCode.png'
 import { motion } from "framer-motion"
 
 interface WhyHandCodeModalProps {
-    onClickCloseModal: () => void,  
+    onClickCloseModal: (e: any) => void,  
 }
 
 function WhyHandCodeModal({onClickCloseModal}: WhyHandCodeModalProps) {

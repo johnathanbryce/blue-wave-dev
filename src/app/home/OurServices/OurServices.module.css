@@ -8,7 +8,7 @@
     margin-bottom: 7rem;
 }
 
-.services_card_top {
+.service_detail_top {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,23 +36,22 @@
 }
 
 
-.services_card_top p {
+.service_detail_top p {
     font-size: clamp(1.8rem, 2.5vw, 2.2rem);
     color: var(--textColor)
 }
 
-.services_card_container{
-    display: flex;
-    gap: var(--contentGap);
-}
-
-.services_card_container{
+.service_detail_container{
     display: flex;
     gap: 10rem;
 }
 
+.second_container_margin {
+    margin: 3.5rem 0;
+}
 
-.services_card{
+
+.service_detail{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,20 +68,20 @@
     height: auto;
 }
 
-.services_card p {
+.service_detail p {
     flex: 1;
 }
 
 /* Tablets (portrait) */
 @media (max-width: 950px) { 
-    .services_card_container {
+    .service_detail_container {
         align-items: center;
         flex-direction: column;
         gap: 3rem;
         text-align: left;
     }
 
-    .services_card, .services_card_top{
+    .service_detail, .service_detail_top{
         text-align: left;
     }
 }
@@ -92,7 +91,7 @@
     .services{
         margin-top: 27.5rem;
     }
-    .services_card_top{
+    .service_detail_top{
         width: 100%;
     }
 }
@@ -108,5 +107,6 @@
 @media (max-width: 380px) {  
     .services{
         margin-top: 24.5rem;
+      
     }
 }
