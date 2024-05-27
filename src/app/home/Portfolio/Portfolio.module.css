@@ -10,14 +10,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(2, 1fr);
-    gap: 5.5rem;
+    gap: 7.5rem;
     max-width: 75vw;
 }
+
 
 /* Tablets (landscape) / Small Laptops) */
 @media (max-width: 915px) { 
     .portfolio_card_container{
         grid-template-columns: repeat(1, 1fr);
+        gap: 4.75rem;
         max-width: 90vw;
     }
 }
@@ -25,8 +27,7 @@
 /* Mobile Devices up to 480px */
 @media (max-width: 480px) { 
     .portfolio_card_container{
-        grid-template-columns: repeat(1, 1fr);
-       /*  flex-wrap: wrap; */
+       grid-template-columns: repeat(1, 1fr);
        max-width: inherit;
     }
 }

@@ -1,0 +1,31 @@
+.not_found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem;
+    text-align: center;
+    height: 100vh;
+    background-color: var(--primaryColor);
+}
+
+.not_found h4, .not_found h2 {
+    color: var(--defaultColor);
+}
+
+.sub_header_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.icon{
+    font-size: 6.5rem;
+    color: var(--defaultColor);
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    transition: var(--hoverTransition);
+}
