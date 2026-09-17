@@ -26,8 +26,8 @@ src/
   app/            layout, page, not-found
   app/home/       page sections (Hero, OurServices, Portfolio, About, ...)
   components/     shared UI (Header, Footer, Button, ContactModal, ...)
+  content/        all user-facing copy and image references, typed
   styles/         globals, reset, vars (tokens)
-  assets/         Lottie animations
 public/images/    static images
 ```
 
