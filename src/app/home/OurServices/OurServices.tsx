@@ -8,11 +8,12 @@ import SectionHeader from '@/components/SectionHeader/SectionHeader'
 import WhyHandCodeModal from '@/components/WhyHandCodeModal/WhyHandCodeModal'
 import ContactModal from '@/components/ContactModal/ContactModal'
 import ServiceCard from '@/components/ServiceCard/ServiceCard'
-// internal assets
-import pageSpeed from '../../../../public/images/pageSpeed.png'
-import responsive from '../../../../public/images/responsive.png'
+// content
+import { services } from '@/content/services'
 // external libraries
 import { motion } from "framer-motion"
+
+const [responsiveDetail, performanceDetail] = services.details
 
 function OurServices() {
   // open and close modals
@@ -42,12 +43,13 @@ function OurServices() {
       {/* toggle ContactUs modal */}
       {isContactUsModalActive && <ContactModal onClickCloseModal={() => onClickCloseModal('CONTACT_US')}/>}
 
-      <SectionHeader title={'EXPERTISE'} isOur={true} />
+      <SectionHeader standout={services.heading.standout} title={services.heading.title} />
       <div className={styles.service_detail_top}>
-        <p>We specialize in creating accessible and mobile-friendly websites.</p>
-        <p> Every line of code is written by hand to ensure exceptional performance.</p>
+        {services.intro.map((line) => (
+          <p key={line}>{line}</p>
+        ))}
       </div>
-      <Button label={'WHY HAND CODE?'} onClick={() => onClickOpenModal('WHY_HAND_CODE')} bgColorBlue={true}/>
+      <Button label={services.whyHandCodeLabel} onClick={() => onClickOpenModal('WHY_HAND_CODE')} bgColorBlue={true}/>
 
       <div className={styles.service_detail_container}>
         <div className={styles.service_detail}>
@@ -61,10 +63,10 @@ function OurServices() {
             }}
             transition={{ duration: 1.5, ease: 'easeOut' }}
           >
-            <Image src={responsive} className={styles.services_icon} alt="an icon of a computer and phone"/>
+            <Image src={responsiveDetail.icon} className={styles.services_icon} alt={responsiveDetail.iconAlt}/>
           </motion.div>
-          <h5> Fully Responsive </h5>
-          <p> Your website will have a responsive design that adapts seamlessly to different screen sizes, enabling visitors to access it effortlessly on mobile phones, tablets, and desktop computers.</p>
+          <h5> {responsiveDetail.title} </h5>
+          <p> {responsiveDetail.text}</p>
         </div>
 
         <div className={styles.service_detail}>
@@ -77,28 +79,25 @@ function OurServices() {
             }}
             transition={{ duration: 1.25, ease: 'easeInOut' }}
           >
-            <Image src={pageSpeed} className={styles.services_icon} alt="an icon indicating website performance and optimization"/>
+            <Image src={performanceDetail.icon} className={styles.services_icon} alt={performanceDetail.iconAlt}/>
           </motion.div>
-          <h5> Performance & Optimization </h5>
-          <p> Manually writing the code for our websites and leveraging modern technology ensures better web performance and improved search engine optimization.</p>
+          <h5> {performanceDetail.title} </h5>
+          <p> {performanceDetail.text}</p>
         </div>
       </div>
       <div className={`${styles.service_detail_container} ${styles.second_container_margin}`}>
-          <ServiceCard 
-            title="STANDARD"
-            subtitle='STARTING AT'
-            price='$1K'
-            list={['One-time payment', 'Custom Design', 'Custom Features', 'Expedited Delivery']}
-            onClick={() => onClickOpenModal('CONTACT_US')}
-          />
-          <ServiceCard 
-            title="MONTHLY"
-            subtitle='5 PAGES'
-            price='$140'
-            pricePer=" / month"
-            list={['Unlimited Updates', 'Unlimited Edits', '24/7 Support', 'Includes Hosting' ]}  
-            onClick={() => onClickOpenModal('CONTACT_US')}
-          />
+          {services.pricing.map((card) => (
+            <ServiceCard 
+              key={card.title}
+              title={card.title}
+              subtitle={card.subtitle}
+              price={card.price}
+              pricePer={card.pricePer}
+              list={card.features}
+              ctaLabel={services.pricingCtaLabel}
+              onClick={() => onClickOpenModal('CONTACT_US')}
+            />
+          ))}
       </div>
     </section>
   )

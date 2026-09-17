@@ -6,8 +6,8 @@
     gap: var(--contentGap);
     padding: 3rem;
     border-radius: var(--borderRadius);
-    --webkit-box-shadow: 0 25px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 25px 15px rgba(0, 0, 0, 0.1);
+    --webkit-box-shadow: var(--shadowCard);
+    box-shadow: var(--shadowCard);
     border-bottom: 0.5rem solid var(--secondaryColor);
 }
 

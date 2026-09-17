@@ -4,24 +4,24 @@ import '../styles/globals.css'
 import '../styles/reset.css'
 import '../styles/vars.css'
 import { Roboto } from 'next/font/google'
+// content
+import { site, seo } from '@/content/site'
 // images
-import logo from '../../public/images/logo.png'
+import logo from '@public/images/logo.png'
 
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
 });
 
-const SITE_URL = 'https://www.bluewavedev.ca'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: 'Blue Wave Dev | Custom Web Design & Development Services',
-  description: 'Blue Wave Dev specializes in custom web design and development services for businesses and individuals. Discover how we can help your business thrive online.',
-  keywords: 'Vancouver web design, Vancouver web development, custom web development Vancouver, responsive web design Vancouver, eCommerce development BC, SEO services Vancouver, Next.js, React, small business web solutions, professional website design, website development Vancouver, BC, Canada, Blue Wave Dev',
+  metadataBase: new URL(site.url),
+  title: seo.title,
+  description: seo.description,
+  keywords: seo.keywords,
   robots: 'index, follow',
   openGraph: {
-    url: SITE_URL,
+    url: site.url,
     type: 'website',
     locale: 'en_US',
     images: [logo.src],
@@ -36,20 +36,20 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "http://schema.org",
   "@type": "Organization",
-  "name": "Blue Wave Dev",
-  "url": SITE_URL,
+  "name": site.name,
+  "url": site.url,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Vancouver",
-    "addressRegion": "BC",
-    "addressCountry": "CA"
+    "addressLocality": seo.address.locality,
+    "addressRegion": seo.address.region,
+    "addressCountry": seo.address.country
   },
-  "telephone": "6042207425",
-  "description": "A web design and development agency based in Vancouver, specializing in creating custom websites for businesses.",
-  "areaServed": "Vancouver, BC",
+  "telephone": site.contact.phoneJsonLd,
+  "description": seo.jsonLdDescription,
+  "areaServed": seo.areaServed,
   "sameAs": [
-    "https://www.linkedin.com/company/blue-wave-dev",
-    "https://www.linkedin.com/in/johnathanbryce/"
+    site.social.linkedInCompany,
+    site.social.linkedInPersonal
   ]
 }
 

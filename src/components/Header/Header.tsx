@@ -6,13 +6,12 @@ import Image from 'next/image'
 import NavBarDropdown from '../NavBarDropDown/NavBarDropDown'
 import HamburgerDropdown from '../HamburgerDropdown/HamburgerDropdown'
 import ContactModal from '../ContactModal/ContactModal'
+// content
+import { site, nav } from '@/content/site'
 // external libraries
 import { Link } from 'react-scroll'
 // internal assets
-import Logo from '../../../public/images/logoIcon.png'
-import LogoTransparent from '../../../public/images/logoTransparent.png'
-import LogoTransparentWhite from '../../../public/images/logoTransparentWhite.png'
-import WavesLogoTransparent from '../../../public/images/wavesLogoTransparent.png'
+import WavesLogoTransparent from '@public/images/wavesLogoTransparent.png'
 
 function Header() {
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -62,7 +61,7 @@ function Header() {
         <HamburgerDropdown isDropdownActive={isDropdownActive} toggleDropdown={toggleDropdown}/>
         <Image 
           src={WavesLogoTransparent} 
-          alt="Blue Wave Dev's logo. A circle with two small waves"
+          alt={site.logoAlt}
           className={styles.logo}
           height={75}
           width={75}
@@ -71,22 +70,19 @@ function Header() {
 
         <nav className={styles.navbar}>
             <ul>
-                <li><Link to="services" spy={true} smooth={true} duration={500} offset={-10} > Services </Link></li>
-                <li><Link to="portfolio" spy={true} smooth={true} duration={500} offset={-10} > Portfolio </Link></li>     
-                <li><Link to="about" spy={true} smooth={true} duration={500} offset={-10} > About </Link></li>
-                <li><Link to="" onClick={onClickOpenModal}> Contact </Link></li>  
+                {nav.desktop.map((item) => (
+                  <li key={item.to}><Link to={item.to} spy={true} smooth={true} duration={500} offset={-10} > {item.label} </Link></li>
+                ))}
+                <li><Link to="" onClick={onClickOpenModal}> {nav.contactLabel} </Link></li>  
             </ul>
         </nav>
         
         {/* dropdown nav displays on >950 px screen size */}
         { isDropdownActive &&
             <NavBarDropdown>
-                    {/* <li><Link to="home" spy={true} smooth={true} duration={500} offset={-850} onClick={onNavItemClickCloseDropdown}> Home </Link></li>  */}
-                    <li><Link to="services" spy={true} smooth={true} duration={500} offset={-25}  onClick={onNavItemClickCloseDropdown}> Services </Link></li>  
-                    <li><Link to="portfolio" spy={true} smooth={true} duration={250} offset={-25} onClick={onNavItemClickCloseDropdown}> Portfolio </Link></li>     
-                    <li><Link to="testimonials" spy={true} smooth={true} duration={500} offset={-25} onClick={onNavItemClickCloseDropdown}> Testimonials </Link></li>
-                    <li><Link to="about" spy={true} smooth={true} duration={500} offset={-25} onClick={onNavItemClickCloseDropdown}> About </Link></li>
-                    {/* <li><Link to='' onClick={onClickOpenModal}> Contact </Link></li> */}
+                    {nav.mobile.map((item) => (
+                      <li key={item.to}><Link to={item.to} spy={true} smooth={true} duration={500} offset={-25} onClick={onNavItemClickCloseDropdown}> {item.label} </Link></li>
+                    ))}
             </NavBarDropdown>
         }
     </header>

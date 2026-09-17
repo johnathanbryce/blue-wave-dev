@@ -4,7 +4,7 @@
     top: 4rem;
     right: 8rem;
     cursor: pointer;
-    color: white;
+    color: var(--defaultColor);
     z-index: 100;
 }
 
@@ -17,9 +17,9 @@
     width: 4rem;
     height: 0.4rem;
     margin: 0.5rem auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color:  white;
+    -webkit-transition: all var(--hoverTransition);
+    transition: all var(--hoverTransition);
+    background-color: var(--defaultColor);
 }
 
 .hamburger_active .bar:nth-child(2){

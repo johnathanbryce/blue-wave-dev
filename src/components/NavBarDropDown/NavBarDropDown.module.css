@@ -57,7 +57,7 @@
     background-color: var(--defaultColor);
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform var(--hoverTransition);
 }
 
 .navbar_dropdown li:hover::before {

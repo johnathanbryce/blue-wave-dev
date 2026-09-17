@@ -23,8 +23,8 @@
 .reusable_btn_blue {
     background-color: var(--secondaryColor);
     border-radius: var(--borderRadius);
-    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: var(--shadowMd);
+    box-shadow: var(--shadowMd);
 }
 
 

@@ -4,6 +4,8 @@ import styles from './NewProject.module.css'
 // internal components
 import ContactModal from '@/components/ContactModal/ContactModal'
 import Button from '@/components/Button/Button'
+// content
+import { newProject } from '@/content/newProject'
 
 function NewProject() {
   const [isContactModalActive, setIsContactModalActive] = useState(false);
@@ -20,11 +22,11 @@ function NewProject() {
     <section className={styles.new_project}>
         {isContactModalActive && <ContactModal onClickCloseModal={onClickCloseModal}/>}
         <div className={styles.new_project_content_left}>
-            <h2 className={styles.new_project_title}> Start A New Project </h2>
-            <p className={styles.white_font_bold}> Now that you&apos;re familiar with our process, let&rsquo;s get you going on your new project!</p>
+            <h2 className={styles.new_project_title}> {newProject.title} </h2>
+            <p className={styles.white_font_bold}> {newProject.text}</p>
             <div className={styles.contact_container}>
-                <Button label={'REQUEST A QUOTE'} onClick={onClickOpenModal} />
-                <p className={styles.white_font_bold}> or (604) 220 7425</p>
+                <Button label={newProject.ctaLabel} onClick={onClickOpenModal} />
+                <p className={styles.white_font_bold}> {newProject.phoneLine}</p>
             </div>
         </div>
     </section>

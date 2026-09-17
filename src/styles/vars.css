@@ -1,6 +1,8 @@
 :root {
+    /* colors */
     --primaryColor: #0062E6;
     --secondaryColor: #3D94FF;
+    --secondaryColorRgb: 61, 148, 255; /* --secondaryColor as r, g, b for rgba() glows */
     --tertiaryColor: #D8DBE2;
     --defaultColor: #FFFFFF; 
 
@@ -10,10 +12,19 @@
     --backgroundColor: #0062E6;
     --backgroundColorFlip: #FFFFFF;
     
-
     --textColor: #FFFFFF;
     --textColorFlip: #1B1B1E;
     --textColorGrey: #888888;
+    --textColorGreyLight: #999999;
+
+    --borderColorInput: #CCCCCC;
+    --overlayColor: rgba(0, 0, 0, 0.5);
+    --lineColor: rgba(var(--secondaryColorRgb), 0.6);
+
+    /* shadows */
+    --shadowSm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadowMd: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    --shadowCard: 0 25px 15px rgba(0, 0, 0, 0.1);
 
     /* border styles */
     --borderRadius: 0.5rem;

@@ -1,21 +1,23 @@
 'use client'
 import styles from './PortfolioCard.module.css'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 // external libraries
 import { motion } from "framer-motion"
 
 
 interface PortfolioCardProps {
-    image: any,
+    image: StaticImageData,
+    imageAlt: string,
     header: string,
     location: string,
     description: string,
+    visitLabel: string,
     buttonLabel: string,
     buttonSrc: string,
 }
 
-function PortfolioCard({image, header, location, description, buttonLabel, buttonSrc}: PortfolioCardProps) {
+function PortfolioCard({image, imageAlt, header, location, description, visitLabel, buttonLabel, buttonSrc}: PortfolioCardProps) {
   return (
     <motion.div 
       className={styles.portfolio_card}
@@ -27,7 +29,7 @@ function PortfolioCard({image, header, location, description, buttonLabel, butto
         <Image 
          className={styles.portfolio_img}
           src={image} 
-          alt='A preview of a website built by Blue Wave Dev'
+          alt={imageAlt}
           width={500}
           height={500}
         />
@@ -42,7 +44,7 @@ function PortfolioCard({image, header, location, description, buttonLabel, butto
           target="_blank" 
           rel="noreferrer"
           >
-          <span>VISIT</span> {buttonLabel}
+          <span>{visitLabel}</span> {buttonLabel}
         </Link>
     </motion.div>
   )
