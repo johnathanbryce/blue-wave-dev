@@ -4,9 +4,6 @@ import styles from './NewProject.module.css'
 // internal components
 import ContactModal from '@/components/ContactModal/ContactModal'
 import Button from '@/components/Button/Button'
-// internal assets
-import Lottie from 'lottie-react';
-import animationData from '../../../assets/newProject.json'
 
 function NewProject() {
   const [isContactModalActive, setIsContactModalActive] = useState(false);
@@ -30,9 +27,6 @@ function NewProject() {
                 <p className={styles.white_font_bold}> or (604) 220 7425</p>
             </div>
         </div>
-{/*         <div className={styles.animation}>
-          <Lottie animationData={animationData}/>
-        </div> */}
     </section>
   )
 }
