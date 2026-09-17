@@ -5,6 +5,7 @@ import LayoutContainer from "@/components/LayoutContainer/LayoutContainer"
 // internal pages
 import Hero from "./home/Hero/Hero"
 import OurServices from "./home/OurServices/OurServices"
+import FeaturedClients from "./home/FeaturedClients/FeaturedClients"
 import NewProject from "./home/NewProject/NewProject"
 import Portfolio from './home/Portfolio/Portfolio'
 import Testimonials from './home/Testimonials/Testimonials'
@@ -19,6 +20,7 @@ export default function Home() {
       <LayoutContainer>
         <Hero />  
         <OurServices />
+        <FeaturedClients />
       </LayoutContainer>
       <NewProject />
       <LayoutContainer>
