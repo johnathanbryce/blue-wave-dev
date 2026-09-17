@@ -18,6 +18,11 @@ function About() {
         <div className={styles.text_container_bottom}>
             <h5> {about.name}</h5>
             <h6> {about.role} </h6>
+            <ul className={styles.links}>
+              {about.links.map((link) => (
+                <li key={link.url}><a href={link.url} target="_blank" rel="noreferrer">{link.label}</a></li>
+              ))}
+            </ul>
         </div>
     </section>
   )

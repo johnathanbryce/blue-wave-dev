@@ -35,6 +35,25 @@
     font-weight: 400;
 }
 
+.links{
+    display: flex;
+    justify-content: center;
+    gap: var(--contentGap);
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+}
+
+.links a{
+    color: var(--primaryColor);
+    font-weight: 700;
+    transition: var(--hoverTransition);
+}
+
+.links a:hover{
+    color: var(--secondaryColor);
+}
+
 /* Tablets (portrait) */
 @media (max-width: 950px){
     .text_container{

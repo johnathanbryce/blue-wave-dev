@@ -46,7 +46,6 @@ const jsonLd = {
   },
   "telephone": site.contact.phoneJsonLd,
   "description": seo.jsonLdDescription,
-  "areaServed": seo.areaServed,
   "sameAs": [
     site.social.linkedInCompany,
     site.social.linkedInPersonal

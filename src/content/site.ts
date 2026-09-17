@@ -13,6 +13,7 @@ export const site = {
     linkedInCompany: 'https://www.linkedin.com/company/blue-wave-dev',
     linkedInPersonal: 'https://www.linkedin.com/in/johnathanbryce/',
     github: 'https://github.com/johnathanbryce',
+    website: 'https://www.jbryce.dev',
   },
   logoAlt: "Blue Wave Dev's logo. A circle with two small waves",
   wavesLogoAlt: "Blue Wave Dev's waves logo",
@@ -26,7 +27,6 @@ export const seo = {
     'software consulting Vancouver, AI consulting Vancouver, AI engineer, RAG, LLM agents, FastAPI, Next.js, full stack engineer, small business web development, Blue Wave Dev, Johnathan Bryce',
   jsonLdDescription:
     'Software and AI consulting practice in Vancouver, BC, run by Johnathan Bryce. AI feature scoping, architecture, RAG and search, LLM agents, full stack delivery and infrastructure.',
-  areaServed: 'Vancouver, BC', // TODO(johnathan): do you take remote work across Canada? If so, change to "Canada".
   address: { locality: 'Vancouver', region: 'BC', country: 'CA' },
 } as const
 

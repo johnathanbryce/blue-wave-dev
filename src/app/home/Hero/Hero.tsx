@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import styles from './Hero.module.css'
-import Image from 'next/image'
 // internal components
 import CurveBackgroundTop from '@/components/CurveBackgroundTop/CurveBackgroundTop'
 import Button from '@/components/Button/Button'
@@ -31,15 +30,6 @@ function Hero() {
           <h3 className={styles.subheader}> {hero.subtitle} </h3>
           <p className={styles.hero_text}> {hero.text}</p>
           <Button label={hero.ctaLabel} onClick={onClickOpenModal}/>
-      </div>
-      <div className={styles.img_container}>
-        <Image className={styles.hero_img} 
-          src={hero.image} 
-          alt={hero.imageAlt} 
-          width={500}
-          height={500}
-          priority
-        />
       </div>
     </section>
   )

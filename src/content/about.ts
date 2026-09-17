@@ -6,6 +6,11 @@ export const about = {
   image: jbBioPic,
   imageAlt: 'Johnathan Bryce smiling with a backdrop of Downtown Vancouver',
   linkUrl: 'https://www.linkedin.com/in/johnathanbryce/',
+  links: [
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/johnathanbryce/' },
+    { label: 'GitHub', url: 'https://github.com/johnathanbryce' },
+    { label: 'jbryce.dev', url: 'https://www.jbryce.dev' },
+  ],
   name: 'Johnathan Bryce',
   role: 'Full Stack & AI Software Engineer',
 } as const

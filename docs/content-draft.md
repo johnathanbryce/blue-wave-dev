@@ -14,7 +14,7 @@ Voice: first person singular ("I"), or "Blue Wave Dev". Never "we" or "our team"
 - Description: Software and AI consulting by Johnathan Bryce, a full stack and AI software engineer in Vancouver, BC. AI feature scoping, RAG and search systems, LLM agents, full stack delivery and infrastructure, plus web development for small businesses.
 - Keywords: software consulting Vancouver, AI consulting Vancouver, AI engineer, RAG, LLM agents, FastAPI, Next.js, full stack engineer, small business web development, Blue Wave Dev, Johnathan Bryce
 - JSON-LD description: Software and AI consulting practice in Vancouver, BC, run by Johnathan Bryce. AI feature scoping, architecture, RAG and search, LLM agents, full stack delivery and infrastructure.
-- Area served: Vancouver, BC. TODO(johnathan): do you take remote work across Canada? If so this should say Canada.
+- Area served: not stated. Work is global.
 - Tagline (footer): Software & AI Consulting
 
 ## Navigation
@@ -28,7 +28,7 @@ Mobile: Services, Work, Small Business, Testimonials, About
 - Subtitle: Software & AI Consulting
 - Text: I help teams scope, build and run software with AI in it. Python and FastAPI on the back end, TypeScript and Next.js on the front, and the infrastructure to keep it running.
 - Button: GET IN TOUCH
-- TODO(johnathan): the hero image is a laptop showing the Julien Verschooris site. It no longer matches the positioning. Replace or drop in the design pass.
+- No hero image. The old laptop image was dropped; the design pass decides whether the hero gets one.
 
 ## Consulting services (`services.ts`)
 
@@ -47,7 +47,7 @@ Intro:
 
 Removed entirely: the two pricing cards (Standard $1K, Monthly $140) and the "Why hand code?" modal.
 
-TODO(johnathan): engagement model. Hourly, fixed scope, retainer, or "let's talk"? The site currently says nothing about how you work or price, which is fine for a draft but the design will want a line.
+Engagement model: depends on the client and the ask. The site says nothing about pricing or format, by choice.
 
 ## Selected work (`clients.ts`)
 
@@ -57,9 +57,10 @@ Intro: Consulting and engineering engagements. Text only by design.
 ### Caseway
 
 > **REQUIRES JOHNATHAN SIGN-OFF.** Every line comes from the resume. No logo, no screenshots, no product link, nothing about how or when the engagement ended. Do not merge to main without explicit approval.
-> TODO(johnathan): confirm which points are cleared for public use, and whether "Casey" may be named.
+> TODO(johnathan): confirm you are comfortable publishing these resume specifics about an employer (the $150 to $60 spend figure, 7.8M PDFs, team lead, Web Summit) and that the product name "Casey" may appear. Also confirm the link to caseway.ai stays; the brief said no link into their product, and this is the company homepage.
 
 Role: Lead Software Engineer
+Link: https://caseway.ai/
 
 Summary: Lead engineer on Casey, an AI legal research platform used by lawyers and researchers across Canada. Took over an existing Next.js and FastAPI codebase and became the primary author of the backend, from search infrastructure to the user-facing research agent.
 
@@ -69,19 +70,22 @@ Summary: Lead engineer on Casey, an AI legal research platform used by lawyers a
 - Owned the DigitalOcean infrastructure, wrote the GitHub Actions CI/CD pipelines, held release authority for production, and led an end-to-end infrastructure and security audit.
 - Onboarded and led a four-person offshore development team, wrote the platform documentation, and ran product demos including the Web Summit Vancouver booth.
 
-### NextTier Sports
+### Next Tier
 
 Role: AI consulting
-Summary: AI feature scoping and architecture guidance.
-TODO(johnathan): what was the feature, and what did the guidance cover? Is there a public site to link?
+Link: https://nexttierstats.com/
+Summary: Advised their developer on scaling the app, which services to use, and how to set up and run a RAG-powered chatbot.
 
 ### Unity Clothing
 
 Role: E-commerce consulting
-Summary: Shopify e-commerce consulting.
-TODO(johnathan): what did the Shopify work involve (theme, apps, checkout, integrations)? Is there a public site to link?
+Link: https://unityclothing.ca/
+Summary: Audited their Shopify storefront and delivered SEO and other updates.
 
-TODO(johnathan): the resume also lists SEO and metadata restructuring for Provincial Health Services Authority SharePoint systems under Blue Wave Dev. Include it as a fourth entry?
+### Provincial Health Services Authority
+
+Role: SharePoint consulting
+Summary: Audited their SharePoint systems and restructured SEO and metadata.
 
 ## Call to action band (`newProject.ts`)
 
@@ -109,8 +113,8 @@ Title: Full Stack & AI Software Engineer
 
 Bio: I am Johnathan Bryce, a full stack and AI software engineer in Vancouver, BC. Most recently I was the lead engineer on an AI legal research platform, where I owned the backend, the search infrastructure, the LLM agent and the production infrastructure. Before that I built a React Native app and web platform as a founding front end developer at Romp, and a full stack admin dashboard on AWS for MCQ Markets. I work in Python and FastAPI, TypeScript and Next.js, PostgreSQL, Redis and Elasticsearch, and I have shipped with the Claude and Gemini APIs, LangChain and LangGraph. I hold a BSc in Psychology from the University of Victoria and spent several years in analyst roles in the public sector before moving into software.
 
-Photo: existing headshot. TODO(johnathan): keep this photo, or supply a newer one for the design pass?
-Link: LinkedIn (existing). TODO(johnathan): also link GitHub (github.com/johnathanbryce) and jbryce.dev?
+Photo: existing headshot, kept.
+Links: LinkedIn, GitHub (github.com/johnathanbryce), jbryce.dev.
 
 ## Contact modal (`site.ts`)
 
@@ -119,7 +123,7 @@ Link: LinkedIn (existing). TODO(johnathan): also link GitHub (github.com/johnath
 - Button: Send
 - Thanks: Thanks for reaching out. I read every message and will reply as soon as I can. - Johnathan Bryce
 
-TODO(johnathan): the form posts to formsubmit.co with your Gmail address and opens their confirmation page in a new tab. Keep that, or move to a proper endpoint in phase 2? Keep the phone number public?
+The form posts to formsubmit.co with the Gmail address and opens their confirmation page in a new tab. Kept for now. Phone number stays public.
 
 ## 404
 
@@ -129,13 +133,6 @@ Unchanged.
 
 ## Open TODOs, in one place
 
-1. Caseway block: sign-off required. Which points are public, and may "Casey" be named?
-2. NextTier Sports: what was the feature and the guidance? Public link?
-3. Unity Clothing: what did the Shopify work involve? Public link?
-4. Include PHSA SharePoint work as a fourth entry?
-5. Area served: Vancouver only, or Canada?
-6. Engagement model line (hourly, fixed scope, retainer)?
-7. Hero image: replace or drop?
-8. Headshot: keep or replace?
-9. Link GitHub and jbryce.dev from About?
-10. Contact form: keep formsubmit.co? Keep phone public?
+1. Caseway block: sign-off required. Confirm the resume specifics are fine to publish, that "Casey" may be named, and that the caseway.ai link stays.
+
+Resolved 2026-09-17: Next Tier and Unity Clothing descriptions and links; PHSA added as a fourth entry; no area served (global); no engagement model line; hero image dropped; headshot kept; About links LinkedIn, GitHub and jbryce.dev; contact form and phone stay.

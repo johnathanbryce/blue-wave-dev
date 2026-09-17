@@ -3,6 +3,7 @@ export type Client = {
   role: string
   summary: string
   points: readonly string[]
+  url?: string
 }
 
 export const clients = {
@@ -12,10 +13,12 @@ export const clients = {
     // REQUIRES JOHNATHAN SIGN-OFF
     // Every line below comes from the resume. Do not merge to main without explicit approval.
     // No logo, no screenshots, no product link, nothing about how or when the engagement ended.
-    // TODO(johnathan): confirm which of these points are cleared for public use, and whether "Casey" may be named.
+    // TODO(johnathan): confirm you are comfortable publishing these resume specifics about an employer (the $150 to $60 spend figure, 7.8M PDFs, team lead, Web Summit) and that the product name "Casey" may appear.
     {
       name: 'Caseway',
       role: 'Lead Software Engineer',
+      // TODO(johnathan): you supplied this link. The brief said no link into their product; this is the company homepage, not the product. Confirm it stays.
+      url: 'https://caseway.ai/',
       summary:
         'Lead engineer on Casey, an AI legal research platform used by lawyers and researchers across Canada. Took over an existing Next.js and FastAPI codebase and became the primary author of the backend, from search infrastructure to the user-facing research agent.',
       points: [
@@ -27,17 +30,23 @@ export const clients = {
       ],
     },
     {
-      name: 'NextTier Sports',
+      name: 'Next Tier',
       role: 'AI consulting',
-      summary: 'AI feature scoping and architecture guidance.',
-      // TODO(johnathan): what was the feature, and what did the guidance cover? Is there a public site to link?
+      url: 'https://nexttierstats.com/',
+      summary: 'Advised their developer on scaling the app, which services to use, and how to set up and run a RAG-powered chatbot.',
       points: [],
     },
     {
       name: 'Unity Clothing',
       role: 'E-commerce consulting',
-      summary: 'Shopify e-commerce consulting.',
-      // TODO(johnathan): what did the Shopify work involve (theme, apps, checkout, integrations)? Is there a public site to link?
+      url: 'https://unityclothing.ca/',
+      summary: 'Audited their Shopify storefront and delivered SEO and other updates.',
+      points: [],
+    },
+    {
+      name: 'Provincial Health Services Authority',
+      role: 'SharePoint consulting',
+      summary: 'Audited their SharePoint systems and restructured SEO and metadata.',
       points: [],
     },
   ] satisfies Client[],

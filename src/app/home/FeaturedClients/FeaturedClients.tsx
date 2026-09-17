@@ -12,7 +12,11 @@ function FeaturedClients() {
       <div className={styles.client_list}>
         {clients.items.map((client) => (
           <article key={client.name} className={styles.client}>
-            <h5>{client.name}</h5>
+            <h5>
+              {client.url
+                ? <a href={client.url} target="_blank" rel="noreferrer" className={styles.name_link}>{client.name}</a>
+                : client.name}
+            </h5>
             <p className={styles.role}>{client.role}</p>
             <p>{client.summary}</p>
             {client.points.length > 0 && (

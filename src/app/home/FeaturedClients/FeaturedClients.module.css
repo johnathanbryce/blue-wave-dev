@@ -29,6 +29,15 @@
     border-bottom: 0.5rem solid var(--secondaryColor);
 }
 
+.name_link{
+    color: var(--textColorFlip);
+    transition: var(--hoverTransition);
+}
+
+.name_link:hover{
+    color: var(--primaryColor);
+}
+
 .role{
     color: var(--textColorGrey);
 }
