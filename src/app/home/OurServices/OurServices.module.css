@@ -43,13 +43,9 @@
 
 .service_detail_container{
     display: flex;
-    gap: 7.5rem;
+    flex-wrap: wrap;
+    gap: 7.5rem 5rem;
 }
-
-.second_container_margin {
-    margin: 3.5rem 0;
-}
-
 
 .service_detail{
     display: flex;
@@ -60,12 +56,7 @@
     gap: var(--contentGap);
     border: 1px solid var(--defaultColor);
     margin-top: 3rem;
-    flex: 1;
-}
-
-.services_icon{
-    width: 10rem;
-    height: auto;
+    flex: 1 1 30rem;
 }
 
 .service_detail p {
@@ -83,6 +74,10 @@
 
     .service_detail, .service_detail_top{
         text-align: left;
+    }
+
+    .service_detail{
+        flex-basis: auto;
     }
 }
 

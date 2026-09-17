@@ -1,70 +1,38 @@
-import type { StaticImageData } from 'next/image'
-import pageSpeed from '@public/images/pageSpeed.png'
-import responsive from '@public/images/responsive.png'
-import whyHandCode from '@public/images/whyHandCode.png'
-
-export type ServiceDetail = {
-  icon: StaticImageData
-  iconAlt: string
+export type Service = {
   title: string
   text: string
 }
 
-export type PricingCard = {
-  title: string
-  subtitle: string
-  price: string
-  pricePer?: string
-  features: string[]
-}
-
 export const services = {
-  heading: { standout: 'OUR', title: 'EXPERTISE' },
+  heading: { standout: 'CONSULTING', title: 'SERVICES' },
   intro: [
-    'We specialize in creating accessible and mobile-friendly websites.',
-    'Every line of code is written by hand to ensure exceptional performance.',
+    'Engineering help for teams building AI features and the systems around them.',
+    'Scoping, architecture, delivery, and the infrastructure to run it in production.',
   ],
-  whyHandCodeLabel: 'WHY HAND CODE?',
-  details: [
+  items: [
     {
-      icon: responsive,
-      iconAlt: 'an icon of a computer and phone',
-      title: 'Fully Responsive',
-      text: 'Your website will have a responsive design that adapts seamlessly to different screen sizes, enabling visitors to access it effortlessly on mobile phones, tablets, and desktop computers.',
+      title: 'AI feature scoping',
+      text: 'Work out whether an AI feature is worth building, which approach fits, what it will cost to run, and what to build first.',
     },
     {
-      icon: pageSpeed,
-      iconAlt: 'an icon indicating website performance and optimization',
-      title: 'Performance & Optimization',
-      text: 'Manually writing the code for our websites and leveraging modern technology ensures better web performance and improved search engine optimization.',
-    },
-  ] satisfies ServiceDetail[],
-  pricing: [
-    {
-      title: 'STANDARD',
-      subtitle: 'STARTING AT',
-      price: '$1K',
-      features: ['One-time payment', 'Custom Design', 'Custom Features', 'Expedited Delivery'],
+      title: 'Architecture guidance',
+      text: 'A second set of eyes on your system design, data flow and model choices before you commit engineering time to them.',
     },
     {
-      title: 'MONTHLY',
-      subtitle: '5 PAGES',
-      price: '$140',
-      pricePer: ' / month',
-      features: ['Unlimited Updates', 'Unlimited Edits', '24/7 Support', 'Includes Hosting'],
+      title: 'RAG and search systems',
+      text: 'Retrieval pipelines, hybrid search on Elasticsearch, document indexing and the caching that keeps it fast and affordable.',
     },
-  ] satisfies PricingCard[],
-  pricingCtaLabel: 'CONTACT US',
-} as const
-
-export const whyHandCodeModal = {
-  titleHighlight: 'Elevated',
-  titleRest: 'Web Design & Development',
-  paragraphs: [
-    'What sets us apart in the development realm is our distinct approach: no WordPress or page builders. We craft each line of code meticulously, granting us unparalleled control over design and lightning-fast website performance.',
-    'Hand-built websites surpass most WordPress sites and drag-and-drop builders, delivering superior results without hefty price tags. In the realm of the web, speed and organization reign supreme.',
-  ],
-  image: whyHandCode,
-  imageAlt: 'a rocket ship blasting off',
-  bullets: ['Fully customizable', 'Responsive', 'Optimized performance', 'Scalable', 'SEO-Friendly'],
+    {
+      title: 'LLM agent design',
+      text: 'Tool-calling agents with model routing, prompt caching and conversation compaction, built to control cost as usage grows.',
+    },
+    {
+      title: 'Full stack delivery',
+      text: 'Python and FastAPI back ends, TypeScript, Next.js and React front ends, PostgreSQL and Redis. I can take a feature from spec to production.',
+    },
+    {
+      title: 'Infrastructure and CI/CD',
+      text: 'DigitalOcean and Azure, Docker, Nginx, GitHub Actions pipelines, monitoring with Sentry, and the release process around them.',
+    },
+  ] satisfies Service[],
 } as const
