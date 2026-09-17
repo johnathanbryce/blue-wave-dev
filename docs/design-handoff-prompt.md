@@ -10,8 +10,7 @@ The current site was built in 2023 as a small-business web design shop. It is be
 
 ## Inputs
 
-- Live site (old design, old positioning): https://www.bluewavedev.ca
-- Preview of the repositioned draft copy on the current design (ugly, but the structure and copy are current): https://johnbryce-web-el2hrx1fp-johnathanbryces-projects.vercel.app
+- Live site: https://www.bluewavedev.ca. This is the old 2023 design carrying the new draft copy and section structure. Read it first, top to bottom, at desktop and phone width. The copy is a placeholder Johnathan wrote quickly; you are expected to rewrite it, keeping the facts.
 - Repo: https://github.com/johnathanbryce/blue-wave-dev
   - `src/content/*.ts`: every piece of copy, typed. `site.ts` (name, contact, nav, SEO, contact modal), `hero.ts`, `services.ts`, `clients.ts`, `newProject.ts`, `smallBusiness.ts`, `testimonials.ts`, `about.ts`
   - `docs/content-draft.md`: the same copy in prose with open TODOs
@@ -28,7 +27,7 @@ Single page is the default. Go multi-page only if a page earns it (for example a
 Sections to cover, in whatever order and form you think best:
 1. Hero: who, what, one call to action
 2. Services: six items, each a title and one or two sentences
-3. Selected work: Caseway, NextTier Sports, Unity Clothing. Text only, see constraints
+3. Selected work: Caseway, Next Tier, Unity Clothing, Provincial Health Services Authority. Text only, each linking to the company homepage. See constraints
 4. Small business websites: four existing projects with screenshots, plus the four existing testimonials. Present clearly as the secondary line
 5. About: short bio, photo, title "Full Stack & AI Software Engineer"
 6. Contact: a form (name, email, message) and email/phone
@@ -50,7 +49,7 @@ Kill anything that does not serve those. The current pricing cards, "why hand co
 
 - Stack is fixed: Next.js 16 App Router, React 19, TypeScript, CSS Modules, `next/font`, `next/image`, framer-motion available. No Tailwind, no component library, no CSS-in-JS.
 - Content must come from `src/content/*.ts`. No copy lives in components.
-- Caseway: text only. No logo, no screenshots, no product imagery, no link into their product, nothing about how or when the engagement ended. Only facts already in `clients.ts`. This block still needs Johnathan's sign-off; design around it as if it may shrink.
+- Caseway: text only. No logo, no screenshots, no product imagery, no link beyond the company homepage already in `clients.ts`, nothing about how or when the engagement ended. Only facts already in `clients.ts`.
 - No client logos anywhere unless Johnathan supplies them with permission.
 - Never invent facts, metrics, client names, quotes or testimonials. The four testimonials in `testimonials.ts` are the only ones that exist.
 - Voice: first person singular ("I") or "Blue Wave Dev". Never "we" or "our team". Plain English. No em-dashes. No agency filler ("cutting-edge", "passionate", "solutions that drive results").
@@ -63,12 +62,12 @@ Kill anything that does not serve those. The current pricing cards, "why hand co
 
 - Hero: one line of what, one line of how, one button. Under 30 words total.
 - Services: six items, title plus at most 25 words each.
-- Work entries: name, role, one summary sentence, up to five bullets for Caseway, one line each for the others until Johnathan supplies more.
+- Work entries: name, role, one summary sentence, up to five bullets for Caseway, one line each for the others.
 - About: under 120 words.
 - Everything else: as short as it can be while still reading as a sentence.
 
 ## Process
 
-Before designing, ask Johnathan anything you need answered. Likely questions: reference sites, whether he wants a dark theme, whether the phone number stays public, whether the current headshot stays, engagement model wording (hourly, fixed scope, retainer), and how much of the Caseway block is cleared.
+Before designing, ask Johnathan anything you need answered. Already decided: the headshot stays, the phone number and email stay public, the contact form stays as is, no area-served claim (work is global), no pricing or engagement-model line. Likely open questions: reference sites, whether he wants a dark theme, and whether the hero gets an image or illustration at all.
 
 Then deliver the seven items above as markdown plus code blocks. Johnathan reviews. Claude Code builds it in the repo.
