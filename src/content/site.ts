@@ -1,6 +1,6 @@
 export const site = {
   name: 'Blue Wave Dev',
-  tagline: 'Web Design + Development',
+  tagline: 'Software & AI Consulting',
   url: 'https://www.bluewavedev.ca',
   contact: {
     email: 'johnathanbryce@gmail.com',
@@ -12,20 +12,21 @@ export const site = {
   social: {
     linkedInCompany: 'https://www.linkedin.com/company/blue-wave-dev',
     linkedInPersonal: 'https://www.linkedin.com/in/johnathanbryce/',
+    github: 'https://github.com/johnathanbryce',
   },
   logoAlt: "Blue Wave Dev's logo. A circle with two small waves",
   wavesLogoAlt: "Blue Wave Dev's waves logo",
 } as const
 
 export const seo = {
-  title: 'Blue Wave Dev | Custom Web Design & Development Services',
+  title: 'Blue Wave Dev | Software & AI Consulting, Vancouver',
   description:
-    'Blue Wave Dev specializes in custom web design and development services for businesses and individuals. Discover how we can help your business thrive online.',
+    'Software and AI consulting by Johnathan Bryce, a full stack and AI software engineer in Vancouver, BC. AI feature scoping, RAG and search systems, LLM agents, full stack delivery and infrastructure, plus web development for small businesses.',
   keywords:
-    'Vancouver web design, Vancouver web development, custom web development Vancouver, responsive web design Vancouver, eCommerce development BC, SEO services Vancouver, Next.js, React, small business web solutions, professional website design, website development Vancouver, BC, Canada, Blue Wave Dev',
+    'software consulting Vancouver, AI consulting Vancouver, AI engineer, RAG, LLM agents, FastAPI, Next.js, full stack engineer, small business web development, Blue Wave Dev, Johnathan Bryce',
   jsonLdDescription:
-    'A web design and development agency based in Vancouver, specializing in creating custom websites for businesses.',
-  areaServed: 'Vancouver, BC',
+    'Software and AI consulting practice in Vancouver, BC, run by Johnathan Bryce. AI feature scoping, architecture, RAG and search, LLM agents, full stack delivery and infrastructure.',
+  areaServed: 'Vancouver, BC', // TODO(johnathan): do you take remote work across Canada? If so, change to "Canada".
   address: { locality: 'Vancouver', region: 'BC', country: 'CA' },
 } as const
 
@@ -34,12 +35,13 @@ export type NavLink = { label: string; to: string }
 export const nav = {
   desktop: [
     { label: 'Services', to: 'services' },
-    { label: 'Portfolio', to: 'portfolio' },
+    { label: 'Work', to: 'clients' },
     { label: 'About', to: 'about' },
   ] satisfies NavLink[],
   mobile: [
     { label: 'Services', to: 'services' },
-    { label: 'Portfolio', to: 'portfolio' },
+    { label: 'Work', to: 'clients' },
+    { label: 'Small Business', to: 'portfolio' },
     { label: 'Testimonials', to: 'testimonials' },
     { label: 'About', to: 'about' },
   ] satisfies NavLink[],
@@ -48,19 +50,19 @@ export const nav = {
 
 export const footer = {
   navigationTitle: 'Navigation',
-  brandTitle: 'Blue Wave',
+  brandTitle: 'Blue Wave Dev',
 } as const
 
 export const contactModal = {
-  titleHighlight: 'Contact',
-  titleRest: 'Us',
+  titleHighlight: 'Get in',
+  titleRest: 'touch',
   namePlaceholder: 'Name',
   emailPlaceholder: 'Email',
-  messagePlaceholder: 'Your Message',
-  submitLabel: 'Submit',
-  thanksTitle: 'Thank you for reaching out!',
-  thanksBody: 'I will respond to your email as soon as possible.',
-  thanksSignature: '- John Bryce',
+  messagePlaceholder: 'What are you building, and where is it stuck?',
+  submitLabel: 'Send',
+  thanksTitle: 'Thanks for reaching out.',
+  thanksBody: 'I read every message and will reply as soon as I can.',
+  thanksSignature: '- Johnathan Bryce',
 } as const
 
 export const notFound = {

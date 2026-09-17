@@ -6,6 +6,11 @@
     margin-top: 7rem;
 }
 
+.intro{
+    text-align: center;
+    width: 85%;
+}
+
 .portfolio_card_container{
     display: grid;
     grid-template-columns: repeat(2, 1fr); 

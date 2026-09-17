@@ -9,6 +9,7 @@ function Portfolio() {
   return (
     <section className={styles.portfolio} id="portfolio">
         <SectionHeader standout={smallBusiness.heading.standout} title={smallBusiness.heading.title} />
+        <p className={styles.intro}>{smallBusiness.intro}</p>
         <div className={styles.portfolio_card_container}>
             {smallBusiness.projects.map((project) => (
               <PortfolioCard 

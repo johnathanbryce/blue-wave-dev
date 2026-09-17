@@ -15,7 +15,8 @@ export type Project = {
 }
 
 export const smallBusiness = {
-  heading: { standout: 'OUR', title: 'PORTFOLIO' },
+  heading: { standout: 'SMALL BUSINESS', title: 'WEBSITES' },
+  intro: 'Blue Wave Dev started as a web design shop, and I still build and maintain sites for small businesses. A few of them:',
   visitLabel: 'VISIT',
   projects: [
     {

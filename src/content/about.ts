@@ -1,11 +1,11 @@
 import jbBioPic from '@public/images/jbBioPic.jpg'
 
 export const about = {
-  heading: { standout: 'WHO', title: 'WE ARE' },
-  bio: 'My name is John and I am a web developer based in Vancouver, BC. I started this business out of a passion for creating modern websites with meticulous attention to detail. Constantly seeking new challenges and projects, I am committed to continuous learning in the ever-evolving field of web development.',
+  heading: { standout: 'ABOUT', title: 'ME' },
+  bio: 'I am Johnathan Bryce, a full stack and AI software engineer in Vancouver, BC. Most recently I was the lead engineer on an AI legal research platform, where I owned the backend, the search infrastructure, the LLM agent and the production infrastructure. Before that I built a React Native app and web platform as a founding front end developer at Romp, and a full stack admin dashboard on AWS for MCQ Markets. I work in Python and FastAPI, TypeScript and Next.js, PostgreSQL, Redis and Elasticsearch, and I have shipped with the Claude and Gemini APIs, LangChain and LangGraph. I hold a BSc in Psychology from the University of Victoria and spent several years in analyst roles in the public sector before moving into software.',
   image: jbBioPic,
-  imageAlt: 'John Bryce smiling with a backdrop of Downtown Vancouver',
+  imageAlt: 'Johnathan Bryce smiling with a backdrop of Downtown Vancouver',
   linkUrl: 'https://www.linkedin.com/in/johnathanbryce/',
-  name: 'John B.',
-  role: 'Owner & Developer',
+  name: 'Johnathan Bryce',
+  role: 'Full Stack & AI Software Engineer',
 } as const
