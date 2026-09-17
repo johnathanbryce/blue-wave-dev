@@ -1,6 +1,6 @@
 export const newProject = {
-  title: 'Start A New Project',
-  text: "Now that you're familiar with our process, let’s get you going on your new project!",
-  ctaLabel: 'REQUEST A QUOTE',
+  title: 'Have a project in mind?',
+  text: 'Tell me what you are building and where it is stuck. I will reply with a straight read on scope and next steps.',
+  ctaLabel: 'GET IN TOUCH',
   phoneLine: 'or (604) 220 7425',
 } as const
