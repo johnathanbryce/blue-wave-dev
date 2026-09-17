@@ -6,7 +6,7 @@ import ContactModal from '@/components/ContactModal/ContactModal'
 import Button from '@/components/Button/Button'
 // internal assets
 import Lottie from 'lottie-react';
-import animationData from '../../../assets/jbwd-1.json'
+import animationData from '../../../assets/newProject.json'
 
 function NewProject() {
   const [isContactModalActive, setIsContactModalActive] = useState(false);
