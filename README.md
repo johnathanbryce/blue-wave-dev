@@ -1,51 +1,40 @@
-JB Small Business Web Design + Development
+# Blue Wave Dev
 
-https://www.johnbrycewebdev.com/
+Marketing site for [Blue Wave Dev](https://www.bluewavedev.ca), a software and AI consulting practice in Vancouver, BC, run by Johnathan Bryce. Single-page Next.js site.
 
-**Introduction**
-Welcome to jB Small Business Web Design + Development, a landing page that showcases my web development and design expertise, specifically tailored for small businesses. This site is not just a portfolio piece; it's a testament to my commitment to helping small businesses establish a strong online presence.
+## Stack
 
-**Features**
-- Professional Design: A clean, modern design that highlights professional web development services.
-- Responsive Layout: Fully responsive web design ensuring a seamless experience on all devices.
-- Portfolio Showcase: A section dedicated to showcasing past projects and successes.
-- Contact Form: An easy-to-use contact form for potential clients to reach out.
-  
-**Technologies**
-- Frontend: Next.js, TypeScript, CSS
-- Hosting/Deployment: Vercel
+- Next.js (App Router), React, TypeScript
+- CSS Modules, design tokens in `src/styles/vars.css`
+- framer-motion, embla-carousel, lottie-react, react-scroll, react-icons
 
-**Getting Started**
+## Local setup
 
-**Prerequisites**
-- Node.js
-- npm or yarn
-  
-**Installation**
-Clone the repository: git clone https://github.com/yourusername/FitFriends.git
-Install NPM packages: npm install
+```bash
+git clone https://github.com/johnathanbryce/blue-wave-dev.git
+cd blue-wave-dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build
+npm run lint
+```
 
-**Running the Application**
-To start the server: npm run dev
-Navigate to http://localhost:3000 to view the application.
+## Project structure
 
-**Usage**
-The site is structured to guide small business owners through my services, portfolio, and contact information.
+```
+src/
+  app/            layout, page, not-found
+  app/home/       page sections (Hero, OurServices, Portfolio, About, ...)
+  components/     shared UI (Header, Footer, Button, ContactModal, ...)
+  styles/         globals, reset, vars (tokens)
+  assets/         Lottie animations
+public/images/    static images
+```
 
-**Navigating the Site**
-- Home: Introduction to my services.
-- Portfolio: Examples of past projects.
-- Contact: A form for inquiries.
+## Deployment
 
-**Contributing**
-While this is a personal portfolio site, feedback and contributions regarding the design, code, or overall functionality are greatly appreciated.
+Vercel, deployed automatically from `main`.
 
-**Fork the Project**
-- Create your Feature Branch (git checkout -b feature/AmazingFeature)
-- Commit your Changes (git commit -m 'Add some AmazingFeature')
-- Push to the Branch (git push origin feature/AmazingFeature)
-- Open a Pull Request
+## Contact
 
-**Contact** Johnathan Bryce - johnathanbryce@gmail.com
-
-Project Link: https://github.com/johnathanbryce/johnbryce-weeb-dev
+Johnathan Bryce, johnathanbryce@gmail.com
