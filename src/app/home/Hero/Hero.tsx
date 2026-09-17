@@ -6,8 +6,8 @@ import Image from 'next/image'
 import CurveBackgroundTop from '@/components/CurveBackgroundTop/CurveBackgroundTop'
 import Button from '@/components/Button/Button'
 import ContactModal from '@/components/ContactModal/ContactModal'
-// internal assets
-import heroImage from '../../../../public/images/heroImage.png'
+// content
+import { hero } from '@/content/hero'
 
 function Hero() {
     // open and close contact modal
@@ -27,15 +27,15 @@ function Hero() {
       {isContactModalActive && <ContactModal onClickCloseModal={onClickCloseModal}/>}
       <CurveBackgroundTop />
       <div className={styles.hero_text_container}>
-          <h1> Blue Wave Dev  </h1>
-          <h3 className={styles.subheader}> Web Design + Development </h3>
-          <p className={styles.hero_text}> We provide completely hand-coded websites with exceptional outcomes, without relying on page builders or WordPress.</p>
-          <Button label="GET IN TOUCH" onClick={onClickOpenModal}/>
+          <h1> {hero.title}  </h1>
+          <h3 className={styles.subheader}> {hero.subtitle} </h3>
+          <p className={styles.hero_text}> {hero.text}</p>
+          <Button label={hero.ctaLabel} onClick={onClickOpenModal}/>
       </div>
       <div className={styles.img_container}>
         <Image className={styles.hero_img} 
-          src={heroImage} 
-          alt="A laptop and phone showcasing one of Blue Wave Dev's projects" 
+          src={hero.image} 
+          alt={hero.imageAlt} 
           width={500}
           height={500}
           priority

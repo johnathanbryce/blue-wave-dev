@@ -9,11 +9,12 @@ interface ServiceCardProps {
     subtitle: string,
     price: string,
     pricePer?: string,
-    list: string[],
+    list: readonly string[],
+    ctaLabel: string,
     onClick?: (e: any) => void;
 }
 
-function ServiceCard({title, subtitle, price, pricePer, list, onClick}: ServiceCardProps) {
+function ServiceCard({title, subtitle, price, pricePer, list, ctaLabel, onClick}: ServiceCardProps) {
   return (
     <article className={styles.service_card}>
         <h5 className={styles.title}>{title}</h5>
@@ -33,7 +34,7 @@ function ServiceCard({title, subtitle, price, pricePer, list, onClick}: ServiceC
         </ul>
         <div className={styles.btn_container}>
             <Button
-                label="CONTACT US"
+                label={ctaLabel}
                 bgColorBlue={true}
                 onClick={onClick}
             />

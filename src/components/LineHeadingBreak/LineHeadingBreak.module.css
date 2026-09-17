@@ -9,7 +9,7 @@
 .line {
     flex: 1;
     height: 0.2rem;
-    background-color: rgba(61, 148, 255, 0.6);
+    background-color: var(--lineColor);
 }
 
 .logo {
@@ -18,7 +18,7 @@
 
 /* .text {
     padding: 0 10px;
-    color: rgba(61, 148, 255, 0.6);
+    color: rgba(var(--secondaryColorRgb), 0.6);
 } */
 
 /* Mobile Devices up to 480px */

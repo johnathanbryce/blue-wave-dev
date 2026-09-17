@@ -23,14 +23,14 @@
 .bio_pic{
     width: 25rem;
     border-radius: var(--borderRadius);
-    border: 0.3rem solid white;
+    border: 0.3rem solid var(--defaultColor);
     margin: 2rem 0;
-    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: var(--shadowMd);
+    box-shadow: var(--shadowMd);
 }
 
 .text_container_bottom h6 {
-    color: #999;
+    color: var(--textColorGreyLight);
     text-transform: uppercase;
     font-weight: 400;
 }
