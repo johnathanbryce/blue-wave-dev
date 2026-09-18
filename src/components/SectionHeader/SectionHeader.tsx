@@ -1,17 +1,26 @@
+import type { ReactNode } from 'react'
 import styles from './SectionHeader.module.css'
-// internal components
-import LineHeadingBreak from '../LineHeadingBreak/LineHeadingBreak'
 
 interface SectionHeaderProps {
-    standout: string,
-    title: string,
+  kicker: string
+  title: string
+  intro?: string
+  balance?: boolean
+  className?: string
+  children?: ReactNode
 }
 
-function SectionHeader({standout, title}: SectionHeaderProps) {
+/* Mono kicker over an H2. With `intro` it becomes the two-column head used by
+   Services and Small business. `children` render under the H2 (About's role line). */
+function SectionHeader({ kicker, title, intro, balance, className, children }: SectionHeaderProps) {
   return (
-    <div className={styles.section_header}>
-        <h2><span className={styles.title_standout_color}>{standout}</span> {title}</h2>
-        <LineHeadingBreak />
+    <div className={`${styles.head}${intro ? ` ${styles.split}` : ''}${className ? ` ${className}` : ''}`}>
+      <div>
+        <p className={styles.kicker}>{kicker}</p>
+        <h2 className={`${styles.title}${balance ? ` ${styles.balance}` : ''}`}>{title}</h2>
+        {children}
+      </div>
+      {intro && <p className={styles.intro}>{intro}</p>}
     </div>
   )
 }

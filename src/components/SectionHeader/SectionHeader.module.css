@@ -1,9 +1,30 @@
-.section_header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 20px var(--col-gap);
+  align-items: end;
 }
 
-.title_standout_color{
-    color: var(--secondaryColor);
+.kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  color: var(--text-faint);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+.intro {
+  font-size: var(--fs-intro);
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 48ch;
+  text-wrap: pretty;
 }

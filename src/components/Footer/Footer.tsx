@@ -1,50 +1,43 @@
-'use client'
-import { useState } from 'react'
+import Image from 'next/image'
 import styles from './Footer.module.css'
 // internal components
-import CurveBackgroundBottom from '../CurveBackgroundBottom/CurveBackgroundBottom'
-import ContactModal from '../ContactModal/ContactModal'
+import LayoutContainer from '../LayoutContainer/LayoutContainer'
 // content
 import { site, nav, footer } from '@/content/site'
-// external libraries
-import { Link } from 'react-scroll'
+// internal assets
+import wavesLogo from '@public/images/wavesLogoTransparentBlue.png'
 
 function Footer() {
-  // open and close contact modal
-  const [isContactModalActive, setIsContactModalActive] = useState(false);
-
-  const onClickOpenModal = () => {
-    setIsContactModalActive(true);                                               
-  }
-
-  const onClickCloseModal = () => {
-    setIsContactModalActive(false);                                               
-  }
   return (
-      <footer className={styles.footer}>
-          {/* toggle contact modal */}
-          {isContactModalActive && <ContactModal onClickCloseModal={onClickCloseModal}/>}
-          <CurveBackgroundBottom />
-          <div className={styles.footer_content}>
-            <div className={styles.logo_wrapper}>
-              <h4> {footer.brandTitle} </h4>
-              <p> {site.tagline} </p>
-            </div>
-            <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
-            <a href={`tel:${site.contact.phoneTel}`}> {site.contact.phoneDisplay}</a>
+    <footer className={styles.footer}>
+      <LayoutContainer className={styles.inner}>
+        <div className={styles.brand}>
+          <div className={styles.brandRow}>
+            <Image src={wavesLogo} alt="" width={26} height={26} className={styles.logo} aria-hidden="true" />
+            <span className={styles.wordmark}>{footer.brandTitle}</span>
           </div>
-          <div className={styles.footer_content}>
-            <h4> {footer.navigationTitle} </h4>
-            <nav className={styles.navbar}>
-            <ul>
-                {nav.desktop.map((item) => (
-                  <li key={item.to}><Link to={item.to} spy={true} smooth={true} duration={500} offset={-10} > {item.label} </Link></li>
-                ))}
-                <li><Link to="" onClick={onClickOpenModal}> {nav.contactLabel} </Link></li>  
-            </ul>
-            </nav>
-          </div>
-      </footer>
+          <p className={styles.brandLine}>{footer.brandLine}</p>
+        </div>
+
+        <nav className={styles.nav} aria-label="Footer">
+          {nav.mobile.map((item) => (
+            <a key={item.to} href={`#${item.to}`} className={styles.link}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className={styles.contact}>
+          <a href={`mailto:${site.contact.email}`} className={styles.link}>
+            {site.contact.email}
+          </a>
+          <a href={`tel:${site.contact.phoneTel}`} className={styles.link}>
+            {site.contact.phoneDisplay}
+          </a>
+          <span className={styles.copyright}>{footer.copyright}</span>
+        </div>
+      </LayoutContainer>
+    </footer>
   )
 }
 

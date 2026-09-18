@@ -1,11 +1,11 @@
 export const site = {
   name: 'Blue Wave Dev',
-  tagline: 'Software & AI Consulting',
+  tagline: 'Software Consulting & Development',
   url: 'https://www.bluewavedev.ca',
   contact: {
     email: 'johnathanbryce@gmail.com',
     phoneDisplay: '(604) 220 7425',
-    phoneTel: '+6042207425',
+    phoneTel: '+16042207425',
     phoneJsonLd: '6042207425',
     formAction: 'https://formsubmit.co/johnathanbryce@gmail.com',
   },
@@ -19,14 +19,14 @@ export const site = {
 } as const
 
 export const seo = {
-  title: 'Blue Wave Dev | Software & AI Consulting, Vancouver',
+  title: 'Blue Wave Dev | Software Consulting and Development, Vancouver',
   description:
-    'Software and AI consulting by Johnathan Bryce, a full stack and AI software engineer in Vancouver, BC. AI feature scoping, RAG and search systems, LLM agents, full stack delivery and infrastructure, plus web development for small businesses.',
+    'Software consulting and development by Johnathan Bryce, a full stack developer in Vancouver, BC. Scoping and planning, architecture review, web and app development, AI features, infrastructure and ongoing engineering support.',
   keywords:
-    'software consulting Vancouver, AI consulting Vancouver, AI engineer, RAG, LLM agents, FastAPI, Next.js, full stack engineer, small business web development, Blue Wave Dev, Johnathan Bryce',
+    'software consulting Vancouver, software development Vancouver, AI consulting Vancouver, AI engineer, RAG, LLM agents, full stack developer, web development, app development, small business web development, Blue Wave Dev, Johnathan Bryce',
   jsonLdDescription:
-    'Software and AI consulting practice in Vancouver, BC, run by Johnathan Bryce. AI feature scoping, architecture, RAG and search, LLM agents, full stack delivery and infrastructure.',
-  areaServed: 'Vancouver, BC', // TODO(johnathan): do you take remote work across Canada? If so, change to "Canada".
+    'Software consulting and development practice in Vancouver, BC, run by Johnathan Bryce. Scoping and planning, architecture and technical review, web and app development, AI features, infrastructure and delivery, and ongoing engineering support.',
+  // No areaServed claim: work is global. Do not re-add a city-scoped areaServed to the JSON-LD.
   address: { locality: 'Vancouver', region: 'BC', country: 'CA' },
 } as const
 
@@ -41,28 +41,20 @@ export const nav = {
   mobile: [
     { label: 'Services', to: 'services' },
     { label: 'Work', to: 'clients' },
-    { label: 'Small Business', to: 'portfolio' },
-    { label: 'Testimonials', to: 'testimonials' },
+    { label: 'Small business', to: 'portfolio' },
     { label: 'About', to: 'about' },
+    { label: 'Contact', to: 'contact' },
   ] satisfies NavLink[],
   contactLabel: 'Contact',
+  themeToggleToDark: 'Switch to dark theme',
+  themeToggleToLight: 'Switch to light theme',
 } as const
 
 export const footer = {
   navigationTitle: 'Navigation',
   brandTitle: 'Blue Wave Dev',
-} as const
-
-export const contactModal = {
-  titleHighlight: 'Get in',
-  titleRest: 'touch',
-  namePlaceholder: 'Name',
-  emailPlaceholder: 'Email',
-  messagePlaceholder: 'What are you building, and where is it stuck?',
-  submitLabel: 'Send',
-  thanksTitle: 'Thanks for reaching out.',
-  thanksBody: 'I read every message and will reply as soon as I can.',
-  thanksSignature: '- Johnathan Bryce',
+  brandLine: 'Software & AI Consulting · Vancouver, BC',
+  copyright: '© 2026 Blue Wave Dev',
 } as const
 
 export const notFound = {

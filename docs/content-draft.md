@@ -69,7 +69,7 @@ Summary: Lead engineer on Casey, an AI legal research platform used by lawyers a
 - Owned the DigitalOcean infrastructure, wrote the GitHub Actions CI/CD pipelines, held release authority for production, and led an end-to-end infrastructure and security audit.
 - Onboarded and led a four-person offshore development team, wrote the platform documentation, and ran product demos including the Web Summit Vancouver booth.
 
-### NextTier Sports
+### Next Tier Stats
 
 Role: AI consulting
 Summary: AI feature scoping and architecture guidance.
@@ -130,7 +130,7 @@ Unchanged.
 ## Open TODOs, in one place
 
 1. Caseway block: sign-off required. Which points are public, and may "Casey" be named?
-2. NextTier Sports: what was the feature and the guidance? Public link?
+2. Next Tier Stats: what was the feature and the guidance? Public link?
 3. Unity Clothing: what did the Shopify work involve? Public link?
 4. Include PHSA SharePoint work as a fourth entry?
 5. Area served: Vancouver only, or Canada?

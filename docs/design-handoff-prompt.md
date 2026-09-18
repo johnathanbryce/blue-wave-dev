@@ -28,7 +28,7 @@ Single page is the default. Go multi-page only if a page earns it (for example a
 Sections to cover, in whatever order and form you think best:
 1. Hero: who, what, one call to action
 2. Services: six items, each a title and one or two sentences
-3. Selected work: Caseway, NextTier Sports, Unity Clothing. Text only, see constraints
+3. Selected work: Caseway, Next Tier Stats, Unity Clothing. Text only, see constraints
 4. Small business websites: four existing projects with screenshots, plus the four existing testimonials. Present clearly as the secondary line
 5. About: short bio, photo, title "Full Stack & AI Software Engineer"
 6. Contact: a form (name, email, message) and email/phone

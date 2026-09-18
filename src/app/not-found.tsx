@@ -1,22 +1,15 @@
-import React from 'react'
 import styles from '../styles/not-found.module.css'
-// Next.js
-import Link from 'next/link'
+// internal components
+import Button from '@/components/Button/Button'
 // content
-import { notFound } from '@/content/site'
-// External Libraries
-import {AiOutlineHome} from 'react-icons/ai'
+import { notFound, site } from '@/content/site'
 
 export default function NotFound() {
   return (
-    <section className={styles.not_found}>
-      <h2> {notFound.title} </h2>
-      <div className={styles.sub_header_wrapper}>
-        <h4> {notFound.subtitle} </h4>
-        <Link href='/'>
-            <AiOutlineHome className={styles.icon} /> 
-        </Link> 
-      </div>
+    <section className={styles.notFound}>
+      <h2 className={styles.title}>{notFound.title}</h2>
+      <p className={styles.subtitle}>{notFound.subtitle}</p>
+      <Button href="/">{site.name}</Button>
     </section>
   )
 }

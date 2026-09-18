@@ -1,0 +1,138 @@
+.section {
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-10);
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr);
+  gap: var(--space-7) var(--space-8);
+  align-items: start;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.text {
+  font-size: var(--fs-intro);
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 40ch;
+  text-wrap: pretty;
+}
+
+.details {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  font-size: var(--fs-body);
+  align-items: baseline;
+}
+
+.dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  color: var(--text-faint);
+}
+
+.dd {
+  margin: 0;
+}
+
+.detailLink {
+  color: var(--text);
+}
+
+.detailLink:hover {
+  color: var(--accent-ink);
+}
+
+/* form */
+.form {
+  padding: 32px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--space-4);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.input {
+  height: 44px;
+  padding: 0 12px;
+  background: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-none);
+  color: var(--text);
+  caret-color: var(--accent);
+}
+
+.input:hover {
+  border-color: var(--text-faint);
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.textarea {
+  height: auto;
+  min-height: 130px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.submit {
+  align-self: flex-start;
+  padding: 0 28px;
+}
+
+/* thanks panel */
+.thanks {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: stretch;
+  justify-content: center;
+}
+
+.thanksTitle {
+  font-size: 28px;
+}
+
+.thanksBody {
+  font-size: var(--fs-body);
+  color: var(--text-muted);
+}
+
+.signature {
+  font-size: var(--fs-body);
+}
+
+@media (max-width: 700px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}

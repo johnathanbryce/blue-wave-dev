@@ -5,8 +5,7 @@ Marketing site for [Blue Wave Dev](https://www.bluewavedev.ca), a software and A
 ## Stack
 
 - Next.js (App Router), React, TypeScript
-- CSS Modules, design tokens in `src/styles/vars.css`
-- framer-motion, embla-carousel, lottie-react, react-scroll, react-icons
+- CSS Modules, design tokens in `src/styles/vars.css` (light/dark), `next/font` (Barlow, Barlow Condensed)
 
 ## Local setup
 
@@ -24,8 +23,8 @@ npm run lint
 ```
 src/
   app/            layout, page, not-found
-  app/home/       page sections (Hero, OurServices, Portfolio, About, ...)
-  components/     shared UI (Header, Footer, Button, ContactModal, ...)
+  app/home/       page sections (Hero, Services, Work, SmallBusiness, About, Contact)
+  components/     shared UI (Header, Footer, WaveDivider, Frame, Button, ...)
   content/        all user-facing copy and image references, typed
   styles/         globals, reset, vars (tokens)
 public/images/    static images

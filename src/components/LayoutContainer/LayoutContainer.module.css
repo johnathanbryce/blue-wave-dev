@@ -1,21 +1,13 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 10%;
-    padding: 0;
-}
-  
-/* Smaller Screen Rezise */
-@media only screen and (max-width: 1200px){
-.container{
-   margin: 0 5%;
-  }
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
-/* Galaxy fold / < 300 px tiny screens */
-@media only screen and (max-width: 300px){
-.container {
-    margin: 0 1rem;
-   
+@media (max-width: 640px) {
+  .container {
+    padding-left: var(--gutter-sm);
+    padding-right: var(--gutter-sm);
   }
 }

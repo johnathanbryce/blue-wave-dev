@@ -1,0 +1,53 @@
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.plate {
+  z-index: 1;
+  background: var(--bg);
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--hair);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--text-muted);
+}
+
+.body {
+  padding: 20px 16px 22px;
+  font-family: var(--font-mono);
+  font-size: clamp(13.5px, 1.1vw, 15px);
+  line-height: 1.6;
+  min-height: 262px;
+  overflow: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 12px;
+  padding: 6px 0;
+  animation: fadeup var(--dur-step) ease both;
+}
+
+.key {
+  color: var(--accent-ink);
+  white-space: nowrap;
+}
+
+.text {
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row {
+    animation: none;
+  }
+}

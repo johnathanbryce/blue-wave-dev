@@ -1,87 +1,134 @@
-/* NOTE HEADER COLUMN CHANGE <950px BELOW*/
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem 10.5%; /* MATCH WITH FOOTER */
-    background-color: var(--primaryColor);
-    position: relative;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hair);
 }
 
-.navbar ul {
-    display: flex;
-    align-items: baseline;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 5.25rem;
-    cursor: pointer;
+/* solid while the mobile panel is open so the page does not show through */
+.header[data-open] {
+  background: var(--bg);
 }
 
-.navbar li {
-    position: relative; /* for underline animation */
-    letter-spacing: 0.2rem;
-    font-weight: 900;
+.bar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-
-.navbar li::before {
-    content: '';
-    position: absolute;
-    bottom: -0.75rem;
-    left: 0;
-    width: 100%;
-    height: 0.2rem;
-    background-color: var(--defaultColor);
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform var(--hoverTransition);
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  margin-right: auto;
 }
 
-.navbar li:hover::before {
-    transform: scaleX(1);
+.brand:hover {
+  color: var(--text);
 }
 
 .logo {
-    width: 8rem;
+  width: 34px;
+  height: 34px;
 }
 
-/* Smaller Screen Rezise */
-@media only screen and (max-width: 1200px){
-    .header {
-        /* padding: 2.5rem 5rem; */
-      }
+.wordmark {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.01em;
 }
 
-/* Tablets (portrait) */
-@media (max-width: 950px) { 
-    .header {
-        flex-direction: column; /* allows for dropdown to display "below" header and icon*/
-        align-items: flex-start;
-        gap: 10rem;
-    }
-    .navbar{
-        display: none;
-    }
-
-
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-right: 10px;
 }
 
-/* Mobile Devices up to 480px */
-@media (max-width: 480px) { 
-    .header{
-        padding: 3rem 2.5rem; /* MATCH WITH FOOTER */
-    }
-
-    .logo {
-        width: 5.5rem;
-    }
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 0;
 }
 
-/* Galaxy fold / < 300 px tiny screens */
-@media only screen and (max-width: 300px){
-    .header {
-        padding: 3rem 1rem;
-      }
+.navLink:hover {
+  color: var(--accent-ink);
 }
 
+.underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform var(--dur-reveal) ease;
+}
+
+.navLink[data-active] .underline {
+  transform: scaleX(1);
+}
+
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -8px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+
+.mobileLink {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hair);
+}
+
+.mobileLink:last-child {
+  border-bottom: 0;
+}
+
+.mobileLink:hover {
+  color: var(--accent-ink);
+}
+
+@media (max-width: 900px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .burger {
+    display: inline-flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .underline {
+    transition: none;
+  }
+}
