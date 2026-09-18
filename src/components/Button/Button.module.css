@@ -1,70 +1,57 @@
-.reusable_btn{
-    background-color: var(--defaultColor);
-    padding: 2rem;
-    width: 22rem;
-    border-radius: var(--borderRadius);
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-none);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: opacity var(--dur-fast) ease;
 }
 
-.reusable_btn:hover{
-    transition: var(--hoverTransition);
-    background-color: var(--highlightColor);
-    outline: 0.2rem solid var(--defaultColor);
-}
-.reusable_font_dark{
-    font-weight: bold;
-    color: var(--textColorFlip);
+.md {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 18px;
 }
 
-.reusable_font_dark:hover p {
-    color: var(--primaryColor);
+.sm {
+  height: 38px;
+  padding: 0 16px;
+  font-size: 16px;
 }
 
-/* blue bg styles */
-.reusable_btn_blue {
-    background-color: var(--secondaryColor);
-    border-radius: var(--borderRadius);
-    -webkit-box-shadow: var(--shadowMd);
-    box-shadow: var(--shadowMd);
+.primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
 }
 
-
-
-.reusable_font_white{
-    font-weight: bold;
-    color: var(--textColor);
+.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--on-accent);
 }
 
-.reusable_btn_blue:hover {
-    transition: var(--hoverTransition);
-    background-color: var(--defaultColor);
-    outline: 0.2rem solid var(--primaryColor);
-    color: var(--primaryColor);
-  }
-  
-.reusable_btn_blue:hover span {
-    color: var(--primaryColor);
+.primary:active {
+  background: var(--accent-press);
 }
 
-/* Mobile Devices up to 480px */
-@media (max-width: 480px) {
-    .reusable_btn{
-        width: 16rem;
-        padding: 1.5rem;
-    }
-
-    .reusable_font_white, .reusable_font_dark{
-        font-size: 1.2rem;
-    }
+.primary:disabled {
+  cursor: default;
 }
 
-/* Mobile Devices up to 380px */
-@media (max-width: 380px) {  
-    .reusable_btn{
-     
-    }
+.quiet {
+  background: transparent;
+  color: var(--text);
+  gap: 6px;
+  padding: 0;
+  height: auto;
 }
 
-
-  
-  
-
+.quiet:hover {
+  color: var(--accent-ink);
+}

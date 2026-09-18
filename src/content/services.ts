@@ -1,38 +1,32 @@
-export type Service = {
-  title: string
-  text: string
-}
+export type Service = { title: string; text: string }
 
 export const services = {
-  heading: { standout: 'CONSULTING', title: 'SERVICES' },
-  intro: [
-    'Engineering help for teams building AI features and the systems around them.',
-    'Scoping, architecture, delivery, and the infrastructure to run it in production.',
-  ],
+  heading: { kicker: '01 / SERVICES', title: 'Consulting and development' },
+  intro: 'Consulting and hands-on engineering for teams that need software built, fixed or thought through.',
   items: [
     {
-      title: 'AI feature scoping',
-      text: 'Work out whether an AI feature is worth building, which approach fits, what it will cost to run, and what to build first.',
+      title: 'Scoping and planning',
+      text: 'Turn an idea or a stalled project into a plan: what to build, in what order, what it costs to run, and what to skip.',
     },
     {
-      title: 'Architecture guidance',
-      text: 'A second set of eyes on your system design, data flow and model choices before you commit engineering time to them.',
+      title: 'Architecture and technical review',
+      text: 'A second set of eyes on system design, data flow and vendor choices before engineering time goes in. Code and infrastructure audits too.',
     },
     {
-      title: 'RAG and search systems',
-      text: 'Retrieval pipelines, hybrid search on Elasticsearch, document indexing and the caching that keeps it fast and affordable.',
+      title: 'Web and app development',
+      text: 'Websites, web apps and mobile apps, built end to end: back end, front end, database and integrations, from spec to production.',
     },
     {
-      title: 'LLM agent design',
-      text: 'Tool-calling agents with model routing, prompt caching and conversation compaction, built to control cost as usage grows.',
+      title: 'AI features',
+      text: 'Assistants, agents, and search over your own data, with the routing and caching that keep model costs predictable. Scoped and built, not just recommended.',
     },
     {
-      title: 'Full stack delivery',
-      text: 'Python and FastAPI back ends, TypeScript, Next.js and React front ends, PostgreSQL and Redis. I can take a feature from spec to production.',
+      title: 'Infrastructure and delivery',
+      text: 'Deployment, CI/CD pipelines, monitoring, and a release process your team can run without me.',
     },
     {
-      title: 'Infrastructure and CI/CD',
-      text: 'DigitalOcean and Azure, Docker, Nginx, GitHub Actions pipelines, monitoring with Sentry, and the release process around them.',
+      title: 'Ongoing engineering support',
+      text: 'A standing arrangement for fixes, upgrades, small features and questions, for teams that need an engineer but not a hire.',
     },
   ] satisfies Service[],
 } as const

@@ -1,0 +1,63 @@
+@keyframes drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes swell {
+  from { transform: scaleY(0.55); }
+  to { transform: scaleY(1.4); }
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.lane {
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+
+.swell {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 50%;
+  animation: swell var(--swell) ease-in-out infinite alternate;
+}
+
+.swellBack {
+  animation-duration: var(--swell-back);
+  animation-delay: -5s;
+}
+
+.lane svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  animation: drift var(--drift) linear infinite;
+}
+
+.back {
+  animation-duration: var(--drift-back);
+  animation-direction: reverse;
+}
+
+/* Front-layer durations come from vars.css; back-layer durations are the
+   design reference's per-divider values so the two layers never sync. */
+.wrapper[data-cadence="1"] { --drift: var(--wave-drift-1); --drift-back: 52s; --swell: var(--wave-swell-1); --swell-back: 12.5s; }
+.wrapper[data-cadence="2"] { --drift: var(--wave-drift-2); --drift-back: 41s; --swell: var(--wave-swell-2); --swell-back: 10s; }
+.wrapper[data-cadence="3"] { --drift: var(--wave-drift-3); --drift-back: 64s; --swell: var(--wave-swell-3); --swell-back: 15s; }
+.wrapper[data-cadence="4"] { --drift: var(--wave-drift-4); --drift-back: 47s; --swell: var(--wave-swell-4); --swell-back: 13.5s; }
+.wrapper[data-cadence="5"] { --drift: var(--wave-drift-5); --drift-back: 58s; --swell: var(--wave-swell-5); --swell-back: 11.5s; }
+
+.wrapper[data-cadence="4"] .swell { animation-delay: -2s; }
+.wrapper[data-cadence="5"] .swell { animation-delay: -3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .swell,
+  .lane svg {
+    animation: none;
+  }
+}

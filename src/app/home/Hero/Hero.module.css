@@ -1,147 +1,90 @@
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5rem); }
-    to { opacity: 1; transform: translateY(0); }
+/* full-bleed: the mark field spans the viewport; copy and plate stay in the column */
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 
-.hero{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 5rem;
+.inner {
+  position: relative;
+  padding-top: 96px;
+  padding-bottom: var(--space-9);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: var(--space-8) var(--col-gap);
+  align-items: center;
 }
 
-.hero_text_container{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    flex: 0.5;
-    z-index: 1;
-    animation: fadeIn 1s ease-out 0.5s;
-    animation-fill-mode: backwards;
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.85;
+  mask-image: radial-gradient(120% 96% at 66% 20%, #000 0%, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 0.35) 58%, rgba(0, 0, 0, 0.1) 76%, transparent 92%);
+  -webkit-mask-image: radial-gradient(120% 96% at 66% 20%, #000 0%, rgba(0, 0, 0, 0.85) 30%, rgba(0, 0, 0, 0.35) 58%, rgba(0, 0, 0, 0.1) 76%, transparent 92%);
 }
 
-.subheader {
-    color: var(--defaultColor);
+.backdrop svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.img_container{
-    position: absolute;
-    width: 75rem;
-    right: 0rem;
-    top: 17.5rem;
-    animation: fadeIn 1s ease-out 1s;
-    animation-fill-mode: backwards;
+.copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
 }
 
-.hero_img{
-    width: 100%;
-    pointer-events: none;
-   /*  object-fit: contain; */
+.kicker {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
 }
 
-.hero_text{
-    color: var(--textColor);
-    font-size: clamp(1.4rem, 3vw, 2rem);
+.title {
+  font-size: var(--fs-display);
+  text-wrap: balance;
+  max-width: 12ch;
 }
 
-
-/* Desktops / Laptops */
-@media (max-width: 1200px) { 
-    .hero_text_container{
-        flex: 0.6;
-        gap: 1.8rem;
-    }
-    .img_container{
-        width: 70rem;
-        right: -4rem;
-    }
+.lead {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-snug);
+  color: var(--text-muted);
+  max-width: 44ch;
+  text-wrap: pretty;
 }
 
-/* Desktops / Laptops */
-@media (max-width: 1100px) { 
-    .img_container{
-        top: 28rem;
-        
-    }
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
 }
 
-/* Tablets (portrait) */
-@media (max-width: 970px) { 
-    .hero{
-        padding-top: 1rem;
-    } 
-    .hero_text_container{
-        flex: 1;
-        gap: 1.5rem;
-    }
-    .img_container{
-        width: 50rem;
-        top: 34rem;
-        right: 10rem;
-        
-    }
+.secondary {
+  gap: 6px;
+  color: var(--text);
+  font-size: 18px;
+  letter-spacing: normal;
 }
 
-/* Mobile Devices (landscape) */
-@media (max-width: 800px) { 
-    .img_container{
-        width: 42rem;
-        top: 34rem;
-        right: 0rem;
-    }
+.secondary:hover {
+  color: var(--accent-ink);
 }
 
-/* Mobile Devices up to 480px */
-@media (max-width: 480px) { 
-    .hero{
-        padding-top: 0;
-    } 
-    .img_container{
-        width: 32rem;
-        top: 30.5rem;
-        right: 0rem;
-    }
+@media (max-width: 640px) {
+  .inner {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
-
-/* Smaller Mobile Devices up to 420px */
-@media (max-width: 420px) {  
-    .img_container{
-        width: 30rem;
-        top: 32rem;
-        right: -1rem;
-    }
-}
-
-/* Smaller Mobile Devices up to 391px */
-@media (max-width: 391px) {  
-    .subheader {
-       width: 100%;
-       font-size: 2rem;
-    }
-
-    .img_container{
-        width: 26.5rem;
-        top: 36rem;
-        right: 0rem;
-    }
-}
-
-
-/* Tiny Mobile Devices up to 325px (e.g. galaxy fold) */
-@media (max-width: 325px) {  
-    .img_container{
-        width: 22rem;
-       /*  top: 54rem; */
-        right: 3rem;
-    }
-}
-
-/* Tiny Mobile Devices up to 295 px */
-@media (max-width: 295px) {  
-    .img_container{
-        width: 22rem;
-        top: 44rem;
-        right: 3rem;
-    }
-}
-

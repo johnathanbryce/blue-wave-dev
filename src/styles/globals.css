@@ -1,71 +1,73 @@
-@import './vars.css';
-
 html {
-    font-size: 62.5%; /* 100% would be 16 px so now, 1 rem = 10px */
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
-    touch-action: pan-y;
-    overscroll-behavior-x: none;
-
-    
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* sticky header 64px + 8px */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; 
-    overflow-x: hidden; 
-}
-  
-  
-main {
-    display: block; /* Render the main element consistently in IE */
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
-p {
-    font-size: clamp(1.6rem, 2vw, 1.8rem);
-    color: var(--textColorFlip);
-    margin: 0;
-    font-weight: 500;
-}
-
-li {
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    color: var(--textColor);
-}
-  
-h2, h3, h4, h5, h6{
-    color: var(--textColorFlip);
-}
-
-
-h1 {
-  font-size: clamp(3.5rem, 5vw, 4.8rem);
-  font-weight: bold;
-  color: var(--textColor);
-}
-
-h2 {
-  font-size: clamp(3rem, 5vw, 4.2rem);
-}
-
-h3 {
-  font-size: clamp(2.5rem, 4vw, 3.8rem);
-}
-
+h1,
+h2,
+h3,
 h4 {
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-heading);
 }
 
-h5 {
-  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+a {
+  color: var(--accent-ink);
+  text-underline-offset: 3px;
 }
 
-h6 {
-  font-size: clamp(1.4rem, 2vw, 2rem);
+a:hover {
+  color: var(--accent-hover);
 }
 
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
 
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(61, 148, 255, 0.3);
+}
+
+/* arrow-link hover: every svg inside a link nudges up-right */
+a svg {
+  transition: transform var(--dur-hover) ease;
+}
+
+a:hover svg {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a:hover svg {
+    transform: none;
+  }
+}

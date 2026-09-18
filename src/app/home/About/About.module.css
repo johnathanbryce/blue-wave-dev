@@ -1,60 +1,82 @@
-.about{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--contentGap);
-    margin-bottom: 12rem;
-    margin-top: 5rem;
+.section {
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-9);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--space-7) var(--col-gap);
+  align-items: start;
 }
 
-.text_container{
-    margin-top: 5rem;
-    width: 85%;
-    text-align: center;
+.photo {
+  max-width: 420px;
 }
 
-.text_container_bottom {
-    margin-top: 2rem;
-    width: 65%;
-    text-align: center;
+.photoInner {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--surface);
 }
 
-.bio_pic{
-    width: 25rem;
-    border-radius: var(--borderRadius);
-    border: 0.3rem solid var(--defaultColor);
-    margin: 2rem 0;
-    -webkit-box-shadow: var(--shadowMd);
-    box-shadow: var(--shadowMd);
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.text_container_bottom h6 {
-    color: var(--textColorGreyLight);
-    text-transform: uppercase;
-    font-weight: 400;
+.captionStrip {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--divider);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  color: var(--text-muted);
 }
 
-/* Tablets (portrait) */
-@media (max-width: 950px){
-    .text_container{
-        text-align: left;
-    }
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
 }
 
-/* Mobile Devices up to 480px */
-@media (max-width: 480px) {  
-    .bio_pic{
-        margin: 0.5rem 0;
-        width: 17rem;
-    }
-
-    .text_container{
-        width: 100%;
-    }
-
-    .text_container_bottom{
-        margin-bottom: 1.8rem;
-    }
+.role {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--accent-ink);
+  margin-top: 6px;
 }
 
+.bio {
+  font-size: 17.5px;
+  line-height: var(--lh-body);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  padding-top: 6px;
+}
+
+.link {
+  font-size: 17px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}

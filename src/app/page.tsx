@@ -1,38 +1,33 @@
-import styles from '../styles/page.module.css'
 // internal components
-import Header from "@/components/Header/Header"
-import LayoutContainer from "@/components/LayoutContainer/LayoutContainer"
-// internal pages
-import Hero from "./home/Hero/Hero"
-import OurServices from "./home/OurServices/OurServices"
-import FeaturedClients from "./home/FeaturedClients/FeaturedClients"
-import NewProject from "./home/NewProject/NewProject"
-import Portfolio from './home/Portfolio/Portfolio'
-import Testimonials from './home/Testimonials/Testimonials'
-import About from './home/About/About'
+import Header from '@/components/Header/Header'
+import WaveDivider from '@/components/WaveDivider/WaveDivider'
 import Footer from '@/components/Footer/Footer'
+// internal pages
+import Hero from './home/Hero/Hero'
+import Services from './home/Services/Services'
+import Work from './home/Work/Work'
+import SmallBusiness from './home/SmallBusiness/SmallBusiness'
+import About from './home/About/About'
+import Contact from './home/Contact/Contact'
 
 export default function Home() {
   return (
     <>
-     <Header />
-     <main>
-      <LayoutContainer>
-        <Hero />  
-        <OurServices />
-        <FeaturedClients />
-      </LayoutContainer>
-      <NewProject />
-      <LayoutContainer>
-        <Portfolio />
-      </LayoutContainer>
-      <Testimonials />
-      <LayoutContainer>
+      <Header />
+      <main id="top">
+        <Hero />
+        <WaveDivider cadence={1} />
+        <Services />
+        <WaveDivider cadence={2} />
+        <Work />
+        <WaveDivider cadence={3} />
+        <SmallBusiness />
+        <WaveDivider cadence={4} />
         <About />
-      </LayoutContainer>
-    </main>
-     <Footer />
+        <WaveDivider cadence={5} />
+        <Contact />
+      </main>
+      <Footer />
     </>
-
   )
 }

@@ -1,14 +1,22 @@
-import styles from './LayoutContainer.module.css';
+import type { ComponentPropsWithoutRef, ElementType } from 'react'
+import styles from './LayoutContainer.module.css'
 
-interface LayoutContainerProps {
-    children: any
-}
+type LayoutContainerProps<T extends ElementType> = {
+  as?: T
+} & ComponentPropsWithoutRef<T>
 
-function LayoutContainer({children}: LayoutContainerProps) {
+/* The 1200px centred column with 24px gutters (16px at ≤640px). */
+function LayoutContainer<T extends ElementType = 'div'>({
+  as,
+  className,
+  children,
+  ...rest
+}: LayoutContainerProps<T>) {
+  const Tag = (as ?? 'div') as ElementType
   return (
-    <div className={styles.container}>
-        {children}
-    </div>
+    <Tag className={`${styles.container}${className ? ` ${className}` : ''}`} {...rest}>
+      {children}
+    </Tag>
   )
 }
 

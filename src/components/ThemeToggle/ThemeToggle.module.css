@@ -1,0 +1,29 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-none);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background: var(--surface);
+  border-color: var(--text-faint);
+}
+
+/* sun when the resolved theme is dark, moon when light */
+.sun { display: none; }
+.moon { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme="light"])) .sun { display: block; }
+  :global(:root:not([data-theme="light"])) .moon { display: none; }
+}
+
+:global([data-theme="dark"]) .sun { display: block; }
+:global([data-theme="dark"]) .moon { display: none; }

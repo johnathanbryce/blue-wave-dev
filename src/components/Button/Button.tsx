@@ -1,14 +1,47 @@
+import type { ReactNode } from 'react'
 import styles from './Button.module.css'
+import { CornerMarks } from '../Frame/Frame'
 
 interface ButtonProps {
-    label: string,
-    bgColorBlue?: boolean,
-    onClick?: (e: any) => void,
+  variant?: 'primary' | 'quiet'
+  size?: 'sm' | 'md'
+  marks?: boolean
+  href?: string
+  onClick?: () => void
+  disabled?: boolean
+  type?: 'button' | 'submit'
+  className?: string
+  children: ReactNode
 }
-function Button({label, bgColorBlue, onClick}: ButtonProps) {
+
+function Button({
+  variant = 'primary',
+  size = 'md',
+  marks = false,
+  href,
+  onClick,
+  disabled,
+  type = 'button',
+  className,
+  children,
+}: ButtonProps) {
+  const cls = [styles.btn, styles[variant], styles[size], className].filter(Boolean).join(' ')
+  const inner = (
+    <>
+      {children}
+      {marks && <CornerMarks />}
+    </>
+  )
+  if (href) {
+    return (
+      <a href={href} className={cls} onClick={onClick}>
+        {inner}
+      </a>
+    )
+  }
   return (
-    <button onClick={onClick} className={`${styles.reusable_btn} ${bgColorBlue ? styles.reusable_btn_blue : ''}`}>
-        <span className={bgColorBlue ? styles.reusable_font_white : styles.reusable_font_dark}>{label}</span>
+    <button type={type} className={cls} onClick={onClick} disabled={disabled}>
+      {inner}
     </button>
   )
 }

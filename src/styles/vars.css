@@ -1,42 +1,162 @@
+/* Blue Wave Dev — design tokens. Replaces src/styles/vars.css.
+   Light on :root, dark under prefers-color-scheme AND an explicit
+   [data-theme] override so a manual toggle can win. */
+
 :root {
-    /* colors */
-    --primaryColor: #0062E6;
-    --secondaryColor: #3D94FF;
-    --secondaryColorRgb: 61, 148, 255; /* --secondaryColor as r, g, b for rgba() glows */
-    --tertiaryColor: #D8DBE2;
-    --defaultColor: #FFFFFF; 
+  /* ── color: light ───────────────────────────────────────────── */
+  --bg: #f6f8fb;
+  --surface: #eceff4;
+  --text: #14181f;
+  --text-muted: #565d68;        /* body-size secondary text, AA on --bg */
+  --text-faint: #6b727c;        /* 12px labels, AA on --bg */
+  --divider: rgba(20, 24, 31, 0.16);
+  --hair: rgba(20, 24, 31, 0.08);
 
-    --highlightColor: #FFF689;
-    --errorColor: #B80C09;
-    
-    --backgroundColor: #0062E6;
-    --backgroundColorFlip: #FFFFFF;
-    
-    --textColor: #FFFFFF;
-    --textColorFlip: #1B1B1E;
-    --textColorGrey: #888888;
-    --textColorGreyLight: #999999;
+  --accent: #0062e6;            /* brand blue, from the waves logo */
+  --accent-ink: #0052c2;        /* accent text on --bg (AA at body size) */
+  --accent-hover: #0052c2;
+  --accent-press: #00439e;
+  --accent-tint: #e8f1ff;
+  --on-accent: #ffffff;
+  --mark: rgba(20, 24, 31, 0.55);   /* blueprint corner registration marks */
 
-    --borderColorInput: #CCCCCC;
-    --overlayColor: rgba(0, 0, 0, 0.5);
-    --lineColor: rgba(var(--secondaryColorRgb), 0.6);
+  --error: #b3261e;
 
-    /* shadows */
-    --shadowSm: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadowMd: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-    --shadowCard: 0 25px 15px rgba(0, 0, 0, 0.1);
+  /* ── type ───────────────────────────────────────────────────── */
+  --font-heading: var(--font-barlow-condensed), system-ui, sans-serif;
+  --font-body: var(--font-barlow), system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-    /* border styles */
-    --borderRadius: 0.5rem;
-    /* hover transition */
-    --hoverTransition: 0.3s ease-in-out;
+  --fs-display: clamp(48px, 7vw, 84px);   /* hero h1 */
+  --fs-h2: clamp(34px, 4vw, 52px);        /* section headings */
+  --fs-h3: 30px;                          /* work entry names */
+  --fs-h3-sm: 26px;                       /* card titles */
+  --fs-lead: clamp(18px, 1.6vw, 21px);    /* hero paragraph */
+  --fs-intro: 18px;                       /* section intros */
+  --fs-body: 17px;
+  --fs-body-sm: 16px;
+  --fs-meta: 15px;
+  --fs-label: 13px;                       /* mono kickers, dt labels */
 
-    /* content gap*/
-    --contentGap: 2.2rem;
+  --lh-tight: 1.05;
+  --lh-snug: 1.45;
+  --lh-body: 1.55;
+  --ls-heading: -0.015em;
+  --ls-label: 0.08em;
 
-    /* cards */
-    --cardWidth: 45rem;
-    --cardWidthMobile: 35rem;
-    --cardWidthMobileTiny: 30rem;
-    
+  /* ── spacing ────────────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 22px;
+  --space-6: 28px;
+  --space-7: 40px;
+  --space-8: 56px;
+  --space-9: 88px;               /* section padding block, desktop */
+  --space-10: 104px;
+
+  --container: 1200px;
+  --gutter: 24px;
+  --gutter-sm: 16px;             /* ≤640px */
+  --col-gap: 64px;
+
+  /* ── radius: square by design (blueprint objects) ───────────── */
+  --radius-none: 0;
+  --radius-sm: 0;                /* keep 0; the system does not round */
+
+  /* ── elevation: used sparingly; frames carry the structure ──── */
+  --shadow-sm: 0 1px 2px rgba(20, 24, 31, 0.10);
+  --shadow-md: 0 3px 10px rgba(20, 24, 31, 0.14);
+  --shadow-lg: 0 12px 32px rgba(20, 24, 31, 0.20);
+
+  /* ── motion ─────────────────────────────────────────────────── */
+  --dur-fast: 200ms;
+  --dur-hover: 250ms;
+  --dur-reveal: 300ms;
+  --dur-step: 450ms;             /* hero step fade-up */
+  --dur-step-gap: 420ms;         /* interval between hero steps */
+  --dur-send: 650ms;             /* form pending state */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: ease-out;
+
+  /* wave dividers: drift / swell pairs, one per break */
+  --wave-drift-1: 30s;  --wave-swell-1: 8s;
+  --wave-drift-2: 22s;  --wave-swell-2: 6.5s;
+  --wave-drift-3: 38s;  --wave-swell-3: 10.5s;
+  --wave-drift-4: 26s;  --wave-swell-4: 7.5s;
+  --wave-drift-5: 34s;  --wave-swell-5: 9.5s;
+
+  color-scheme: light;
+}
+
+/* ── color: dark ──────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1218;
+    --surface: #161c25;
+    --text: #e8ecf2;
+    --text-muted: #aab2bf;
+    --text-faint: #9aa3b0;
+    --divider: rgba(232, 236, 242, 0.18);
+    --hair: rgba(232, 236, 242, 0.09);
+
+    --accent: #3d94ff;
+    --accent-ink: #78b6ff;
+    --accent-hover: #5ea6ff;
+    --accent-press: #2d7fe0;
+    --accent-tint: #0f2a52;
+    --on-accent: #0b1220;
+    --mark: rgba(232, 236, 242, 0.5);
+
+    --error: #ff8a80;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 3px 10px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+
+    color-scheme: dark;
+  }
+}
+
+/* explicit override from the header toggle (localStorage key "bwd-theme") */
+[data-theme="dark"] {
+  --bg: #0e1218;
+  --surface: #161c25;
+  --text: #e8ecf2;
+  --text-muted: #aab2bf;
+  --text-faint: #9aa3b0;
+  --divider: rgba(232, 236, 242, 0.18);
+  --hair: rgba(232, 236, 242, 0.09);
+  --accent: #3d94ff;
+  --accent-ink: #78b6ff;
+  --accent-hover: #5ea6ff;
+  --accent-press: #2d7fe0;
+  --accent-tint: #0f2a52;
+  --on-accent: #0b1220;
+  --mark: rgba(232, 236, 242, 0.5);
+  --error: #ff8a80;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 3px 10px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f6f8fb;
+  --surface: #eceff4;
+  --text: #14181f;
+  --text-muted: #565d68;
+  --text-faint: #6b727c;
+  --divider: rgba(20, 24, 31, 0.16);
+  --hair: rgba(20, 24, 31, 0.08);
+  --accent: #0062e6;
+  --accent-ink: #0052c2;
+  --accent-hover: #0052c2;
+  --accent-press: #00439e;
+  --accent-tint: #e8f1ff;
+  --on-accent: #ffffff;
+  --mark: rgba(20, 24, 31, 0.55);
+  --error: #b3261e;
+  color-scheme: light;
 }
